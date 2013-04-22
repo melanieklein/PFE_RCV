@@ -145,7 +145,7 @@ table {
 body {
   font-size: 15px;
   font-family: 'FolksRegular';
-  background: url('../img/motifBody.png') repeat;
+  background: url('../images/motifBody.png') repeat;
   color: #666666;
   line-height: 1.3em;
 }
@@ -160,18 +160,17 @@ a:hover {
   color: #005656;
   text-decoration: underline;
 }
-.block {
-  width: 62em;
+.section {
   margin: 0 auto;
   margin-top: 4em;
   position: relative;
   padding-top: 4em;
 }
-h1 {
+h2 {
   width: 50.7em;
   position: absolute;
   height: 70px;
-  background: url('../img/ruban.png') no-repeat;
+  background: url('../images/ruban.png') no-repeat;
   background-size: 1054px;
   font-family: 'Oswald';
   text-transform: uppercase;
@@ -179,7 +178,7 @@ h1 {
   color: #FFFFFF;
   text-shadow: -1px -1px 0px #666666;
   top: -1em;
-  left: -3.15em;
+  left: -1.05em;
   padding: 0.8em 0em 0em 3.3em;
 }
 .node {
@@ -188,7 +187,7 @@ h1 {
   padding: 1em;
   margin-bottom: 0.8em;
 }
-h2 {
+h3 {
   font-family: 'Oswald';
   color: #666666;
   font-size: 1.2em;
@@ -207,15 +206,17 @@ h2 {
 }
 header {
   height: 10em;
-  background-image: url('../img/motifH.png');
+  background-image: url('../images/motifH.png');
   background-repeat: repeat;
   margin-bottom: 6em;
+  position: relative;
 }
 .menu-nav {
+  clear: both;
   background-color: #005656;
-  padding: 1em 0em 2em 0em;
+  padding: 1em 0em 1em 0em;
   position: relative;
-  top: 7em;
+  top: 6.2em;
   margin: 0 auto;
   box-shadow: 0px 1px 2px #666666;
 }
@@ -226,35 +227,44 @@ header {
   color: #33979f;
   text-decoration: none;
 }
-#menu1 li,
-#menu2 li {
+.menu-nav ul {
+  display: block;
+  width: 62em;
+  margin: 0 auto;
+}
+.menu-nav li {
   display: inline-block;
   margin: 0 2.3em 0 2.3em;
   position: relative;
 }
-#menu1 li:first-child,
-#menu2 li:first-child {
+.menu-nav li:first-child {
   margin-left: 0;
 }
-#menu1 li:last-child,
-#menu2 li:last-child {
+.menu-nav li:last-child {
   margin-right: 0em;
 }
-#menu1 li:hover div,
-#menu2 li:hover div {
+.menu-nav li:nth-child(3) {
+  margin-right: 17.8em;
+}
+.menu-nav li:hover div {
   visibility: visible;
 }
-#menu1 div,
-#menu2 div {
-  visibility: hidden;
-}
-#menu1 {
-  float: left;
-  margin-left: 2.8em;
-}
-#menu2 {
+.menu-login {
   float: right;
-  margin-right: 2.8em;
+  padding: 0.5em;
+}
+.menu-login li {
+  display: inline-block;
+  margin-left: 0.5em;
+}
+.menu-login a {
+  color: #dfe6e4;
+}
+.menu-login a:hover {
+  color: #005656;
+}
+.search-form {
+  margin-bottom: 0;
 }
 .second-menu {
   position: absolute;
@@ -277,7 +287,7 @@ header {
 }
 #logo {
   position: absolute;
-  top: -5em;
+  top: 3em;
   right: 27.7em;
   z-index: 10;
 }
@@ -294,7 +304,7 @@ header {
   float: left;
 }
 .intro-text li {
-  list-style-image: url('../sprite/check.png');
+  list-style-image: url('../images/check.png');
   margin-bottom: 1em;
   line-height: 1.3em;
 }
@@ -307,9 +317,9 @@ header {
   left: 1.4em;
 }
 .inscription-invite {
-  background-image: url('../sprite/camera.png');
+  background-image: url('../images/camera.png');
   background-repeat: no-repeat;
-  background-size: 50px auto;
+  background-size: 45px auto;
   padding-left: 3em;
   padding-top: 1em;
   font-size: 1.3em;
@@ -351,13 +361,14 @@ header {
 }
 .news-contest {
   margin-right: 1.1em;
-}
-.news-photos {
-  clear: both;
-  margin-right: 1.3em;
+  height: 240px;
 }
 .acces {
   float: right;
+}
+.news-photos {
+  margin-right: 1.3em;
+  clear: both;
 }
 .news-videos li {
   margin-bottom: 1em;
