@@ -8,10 +8,10 @@
 </FilesMatch>
 
 # Don't show directory listings for URLs which map to a directory.
-Options -Indexes
+# Options -Indexes
 
 # Follow symbolic links in this directory.
-Options +FollowSymLinks
+# Options +FollowSymLinks
 
 # Make Drupal handle any 404 errors.
 ErrorDocument 404 /index.php
@@ -33,6 +33,9 @@ DirectoryIndex index.php index.html index.htm
   php_value mbstring.http_output            pass
   php_flag mbstring.encoding_translation    off
 </IfModule>
+
+SetEnv REGISTER_GLOBALS 0
+SetEnv PHP_VER 5
 
 # Requires mod_expires to be enabled.
 <IfModule mod_expires.c>
@@ -129,3 +132,5 @@ DirectoryIndex index.php index.html index.htm
     </FilesMatch>
   </IfModule>
 </IfModule>
+
+
