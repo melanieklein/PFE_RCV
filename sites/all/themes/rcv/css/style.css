@@ -350,7 +350,7 @@ header {
   font-family: 'FolksRegular';
 }
 .col3 {
-  width: 8.5em;
+  width: 12.734em;
 }
 .col4 {
   width: 17.63em;
@@ -390,6 +390,9 @@ header {
   margin-right: 1.3em;
   clear: both;
 }
+.news-photos li {
+  list-style-type: none;
+}
 .news-videos li {
   margin-bottom: 1em;
 }
@@ -399,6 +402,10 @@ header {
 }
 .news-videos-infos p {
   margin-top: 1em;
+}
+.news-photos-infos {
+  float: right;
+  width: 14em;
 }
 /*----------------LECLUB--------------*/
 .activities {
@@ -411,10 +418,10 @@ header {
 .activities-intro p {
   position: absolute;
   background-color: rgba(51, 151, 158, 0.6);
-  padding: 2em 1em 2em 1em;
+  padding: 1em;
   text-align: center;
   color: white;
-  top: 24em;
+  top: 18em;
 }
 .activities-details {
   clear: both;
@@ -511,11 +518,15 @@ em {
   float: left;
 }
 .concours-interclubs,
-.concours-provincial {
+.concours-provincial,
+.concours-national {
   margin-right: 1em;
 }
 .photos {
   clear: both;
+}
+.photos li {
+  list-style-type: none;
 }
 /*-----ALBUM PHOTOS-----*/
 .album-photos {
@@ -538,15 +549,11 @@ em {
   margin-bottom: 0.6em;
 }
 .album-photos li img {
-  box-shadow: 0px 0px 6px #666666;
-  opacity: 0.7;
-  -webkit-transition: opacity 1s ease;
-  -moz-transition: opacity 1s ease;
-  -o-transition: opacity 1s ease;
-  -ms-transition: opacity 1s ease;
+  box-shadow: 0px 0px 5px #666666;
 }
-.album-photos li img:hover {
-  opacity: 1;
+.photos-albums-infos {
+  float: right;
+  width: 46.7em;
 }
 /*----------------CONTACT--------------*/
 .contact-text {
