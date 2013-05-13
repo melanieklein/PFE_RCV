@@ -25,11 +25,25 @@
  */
 ?>
 <li>
-	<div><?php print render($row->field_field_photo); ?></div>
-	<div class="member-infos">
+	<div>
+		<?php print render($row->field_field_photo); ?>
+	</div>
+	<?php if ($row->field_field_adresse_email): ?>
+	<div class="member-email">
+		<button  type="button"></button>
+		<a href="mailto:<?php print render($row->field_field_adresse_email); ?>"><?php print render($row->field_field_adresse_email); ?></a>
+	</div>
+	<?php endif;?>
+
+	<?php if ($row->field_field_numero_telephone):?>
+	<div class="member-phone">
+		<button  type="button"></button>
+		<em><?php print render($row->field_field_numero_telephone); ?></em>
+	</div>
+	<?php endif;?>
+	
+	<div class="member-nom-fonction">
 		<h3><?php print render($row->field_field_prenom);?>&nbsp;<?php print render($row->node_title); ?></h3>
 		<h4><?php print render($row->field_field_fonction); ?></h4>
-		<a href="mailto:<?php print render($row->field_field_adresse_email); ?>"><?php print render($row->field_field_adresse_email); ?></a>
-		<div><?php print render($row->field_field_numero_telephone); ?></div>
 	</div>
 </li>

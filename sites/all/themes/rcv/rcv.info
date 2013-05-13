@@ -79,8 +79,9 @@ stylesheets[all][] = system.menus.css
 
 ; Optionally add some JavaScripts to your theme.
 
-;scripts[] = js/script.js
-
+scripts[] = http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js
+scripts[] = js/turn.js
+scripts[] = js/script.js
 
 
 ; This section lists the regions defined in Zen's default page.tpl.php and

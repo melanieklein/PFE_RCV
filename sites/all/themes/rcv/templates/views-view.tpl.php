@@ -31,7 +31,9 @@ $view = views_get_current_view();
 
 //var_dump($view->name);
 
-if($view->name == 'comite_organisateur'){
+if(($view->name == 'comite_organisateur') || ($view->name =='autres_passionnes')){
+
+  if($view->name == 'comite_organisateur'){
 
     ?>
     <ul class="comite-members"><?php print $rows; ?></ul>
@@ -39,8 +41,48 @@ if($view->name == 'comite_organisateur'){
     <?php 
   }
 
+  if($view->name == 'autres_passionnes'){
+  ?>
+  
+  <div class="links-fcvb colb6">
+    <h3><?php print $view->result[0]->node_title; ?></h3>   
 
-elseif(($view->name != 'comite_organisateur'))
+    <?php
+
+    $liens = $view->result[0]->field_field_liens;
+
+    ?>
+
+    <ul>
+     <?php foreach($liens as $lien):?>
+     <li><?php print render ($lien); ?></li>
+     <?php endforeach;?>
+    </ul> 
+
+  </div>
+
+  <div class="links-divers colb6">
+    <h3><?php print $view->result[1]->node_title; ?></h3>   
+
+    <?php
+
+    $liens = $view->result[1]->field_field_liens;
+
+    ?>
+
+    <ul>
+     <?php foreach($liens as $lien):?>
+     <li><?php print render ($lien); ?></li>
+     <?php endforeach;?>
+    </ul> 
+
+  </div>
+
+  <?php
+  }
+}
+
+elseif(($view->name != 'comite_organisateur') || ($view->name != 'autres_passionnes'))
 {
 ?>
 

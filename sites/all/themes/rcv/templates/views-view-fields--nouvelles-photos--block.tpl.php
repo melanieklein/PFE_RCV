@@ -28,11 +28,7 @@
 <li><?php print render($row->field_field_couverture_album); ?></a>
 	<div class="news-photos-infos">
 		<h4><a href="<?php print render($view->base_table);?>/<?php print render($row->nid);?>"><?php print render($row->node_title); ?></a></h4>
-		<p>Publiée le <?php print render($row->field_field_date);?>
-
-		
-
-		</p>		
+		<p>Publiée le <?php print render($row->field_field_date);?></p>		
 	</div>
 </li>
 

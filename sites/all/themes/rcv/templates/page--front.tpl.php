@@ -146,11 +146,11 @@
     </div>
     </div>
     <section class="section news">
-      <h2>A la une</h2>
+      <h2>à la une</h2>
   
       <section class="bloc news-contest col4"><?php print render($page['content']['views_derniers_concours-block']);?></section>
-      <section class="bloc news-forum col8"><?php print render($page['content']['views_calendrier-block_2']);?></section>
-      <section class="bloc news-calendar col8"><?php print render($page['content']['views_nouveaux_topics-block']);?></section>
+      <section class="bloc news-calendar col8"><?php print render($page['content']['views_calendrier-block_2']);?></section>
+      <section class="bloc news-forum col8"><?php print render($page['content']['views_nouveaux_topics-block']);?></section>
       <section class="news-photos colb6"><?php print render($page['content']['views_nouvelles_photos-block']);?></section>
       <section class="news-videos colb6"><?php print render($page['content']['views_nouvelles_videos-block']);?></section>
 

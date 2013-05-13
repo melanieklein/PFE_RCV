@@ -79,6 +79,13 @@ table {
 @bleu: #33979F;
 @bleuFonce: #005656;
 
+/*----INTERFACE ADMIN----*/
+.primary li {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+
 /*----STYLE GENERAL----*/
 
 body {
@@ -103,7 +110,7 @@ a {
 }
 
 .section {
-	width: 63em;
+	width: 62.65em;
 	margin: 0 auto;
 	margin-top: 4em;
 	position: relative;
@@ -111,7 +118,7 @@ a {
 }
 
 h2 {
-	width:50.7em;
+	width:51.3em;
 	position: absolute;
 	height: 70px;
 	background: url('../images/ruban.png') no-repeat;
@@ -122,8 +129,8 @@ h2 {
 	color: #FFFFFF;
 	text-shadow: -1px -1px 0px @grisFonce;
 	top: -1em;
-	left: -2.75em;
-	padding: 0.8em 0em 0em 3.3em;
+	left: -2.88em;
+	padding: 0.8em 0em 0em 2.9em;
 }
 
 .bloc {
@@ -143,7 +150,7 @@ h3 {
 }
 
 .with-icon {
-	padding-left: 1em;
+	padding-left: 1.2em;
 }
 
 .page {
@@ -278,7 +285,7 @@ header {
 #logo {
 	position: absolute;
 	top: 3em;
-	right: 27.7em;
+	right: 27.04em;
 	z-index: 10;
 	&:hover{
 		background-color: transparent;
@@ -287,32 +294,27 @@ header {
 }
 
 .intro-text {
-	margin-top: 2em;
-	padding: 0 1.5em;
-	display: table;
 	ul {
 		display: block;
 		float: left;
 	}
 
 	li {
-		list-style-image: url('../images/check.png');
+				background-image: url('../images/check.png');
+		background-repeat: no-repeat;
+		padding-left: 1.5em;
 		margin-bottom:1em;
 		line-height: 1.3em;
 	}
-
-	>ul {
-		width: 30em;
+	
+	ul:first-child {
+		margin-right: 1.25em;
 	}
 
-	>ul+ul {
-		width:28.5em;
-		position:relative;
-		left:1.4em;
-	}
 }
 
 .inscription-invite {
+	clear: both;
 	background-image: url('../images/camera.png');
 	background-repeat: no-repeat;
 	background-size: 45px auto;
@@ -332,27 +334,27 @@ header {
 }
 
 .col3 {
-	width: 12.734em;
+	width: 12.459em;
 }
 
 .col4{
-	width: 17.63em;
+	width: 17.8em;
 }
 
 .col8 {
-	width: 38.4em;
+	width: 39.06em;
 }
 
 .col6{
-	width:28.1em;
+	width:28.43em;
 }
 
 .colb6 {
-	width: 30.3em;
+	width: 30.7em;
 }
 
 .colb4 {
-	width:19.8em;
+	width:20.05em;
 }
 
 
@@ -368,19 +370,46 @@ header {
 	float: left;
 }
 
-.news-contest {
-	margin-right: 1.1em;
-	height: 240px;
+.news-forum h3 {
+		background-image: url("../images/icones/forum.png");
+		background-size: 19px;
+		background-repeat: no-repeat;
 }
 
+.news-contest {
+	margin-right: 1.25em;
+	height: 240px;
+	h3 {
+		background-image: url("../images/icones/contest.png");
+		background-size: 19px;
+		background-repeat: no-repeat;
+	}
+}
 
 .acces {
 	float: right;
 }
 
+.news-calendar {
+	h3 {
+		background-image: url("../images/icones/calendar.png");
+		background-size: 19px;
+		background-repeat: no-repeat;
+	}
+	li {
+		margin: 0 !important;
+	}
+}
+
 .news-photos {
-		margin-right: 1.3em;
+		margin-right: 1.25em;
 		clear: both;
+
+		h3 {
+			background-image: url("../images/icones/photos.png");
+			background-size: 19px;
+			background-repeat: no-repeat;
+		}
 
 		li {
 			list-style-type: none;
@@ -389,24 +418,27 @@ header {
 
 .news-videos {
 
+	h3 {
+		background-image: url("../images/icones/videos.png");
+		background-size: 16px;
+		background-repeat: no-repeat;
+	}
+
 	li {
 		margin-bottom: 1em;
+		list-style-type: none;
 		
 	}
 }
 
 .news-videos-infos {
 	float: right;
-	width: 15em;
-
-	p {
-		margin-top: 1em;
-	}
+	width: 14.7em;
 }
 
 .news-photos-infos {
 	float: right;
-	width: 14em;
+	width: 14.7em;
 }
 
 /*----------------LECLUB--------------*/
@@ -434,9 +466,25 @@ header {
 	clear:both;
 	padding-top: 2em;
 
+	>div ul {
+		margin-bottom: 5em;
+
+
+		li {
+			margin-bottom: 1em;
+					background-image: url('../images/check.png');
+		background-repeat: no-repeat;
+		padding-left: 1.5em;
+		}
+	}
+
 	>ul {
 		text-align: center;
 		margin-bottom: 2em;
+
+		li:last-child {
+			margin-top: 2em;
+		}
 	}
 
 	div {
@@ -446,13 +494,19 @@ header {
 			text-align:center;
 		}
 	}
-}
 
-em {
+	em {
 	color: @bleu;
 	text-transform: uppercase;
 	font-family: @oswald;
 }
+
+}
+
+.activities-jeudi {
+	margin-right: 1.25em;
+}
+
 
 .comite {
 	clear: both;
@@ -461,10 +515,8 @@ em {
 .comite-members {
 	>div {
 		float: left;
-		margin: 0em 0.49em 2em 0.49em;
-		&:hover .member-infos {
-			opacity:1;
-		}
+		margin: 0em 0.66em 2em 0.66em;
+		position: relative;
 
 		&:first-child {
 			margin-left: 0;
@@ -485,44 +537,87 @@ em {
 		&:last-child{
 			margin-right: 0;
 		}
-		li {
-			position: relative;
-		}
 
-		h3,h4 {
-			color: #ffffff;
-		}
 	}
 
 }
 
-.member-infos {
-		position: absolute;
-		background-color: rgba(102,102,102,.8);
-		padding: 1em 1em 1em 1em;
-		text-align: center;
-		color: white;
-		top: 0em;
-		width: 185px;
-		height: 185px;
-		opacity: 0;
-		-webkit-transition: opacity 1s ease;
-		-moz-transition: opacity 1s ease;
-		-o-transition: opacity 1s ease;
-		-ms-transition: opacity 1s ease;
+.member-email {
+	position: absolute;
+	top: 8.5em;
+	width: 235px;
+	height: 40px;
+	right: -0.8em;
 
+	button {
+		height: 39px;
+		background-image: url('../images/icones/member-email.png');
+		background-repeat: no-repeat;
+		background-size: 40px;
+		border: none;
+		background-color: transparent;
+		width: 44px;
+		cursor:pointer;
+		&:hover+a {
+			visibility: visible;
+		}
+	}
+
+	a {
+		visibility: hidden;
+		color:  #FFFFFF;
+	}
 }
 
+.member-phone {
+	position: absolute;
+	top: 11em;
+	width: 235px;
+	height: 40px;
+	right: -0.8em;
+
+	button {
+		height: 39px;
+		background-image: url('../images/icones/member-phone.png');
+		background-repeat: no-repeat;
+		background-size: 40px;
+	 	border: none;
+		background-color: transparent;
+		width: 44px;
+		cursor:pointer;
+		&:hover+em {
+			visibility: visible;
+		}
+	}
+
+	em {
+		visibility: hidden;
+		color:  #FFFFFF;
+	}
+}
+
+.member-nom-fonction {
+	text-align: center; 
+	margin-top: 0.4em;
+	h3 {
+		margin-bottom: 0.2em;
+	}
+}
 
 .links {
 	clear: both;
 
-	div {
+	>div {
 		float:left;
-		&:first-child{
-			margin-right: 1.2em;
-		}
 	}
+
+	li {
+		margin: 0 !important;
+	}
+}
+
+.links-fcvb {
+	margin-right: 1.25em;
 }
 
 
@@ -532,12 +627,17 @@ em {
 .realisations {
 	li {
 		margin-bottom: 2em;
+		list-style-type: none;
 	}
+}
+
+.realisations-video {
+	display: inline-block;
 }
 
 .realisations-infos {
 	float: right;
-width: 41em;
+	width: 30.7em;
 }
 
 /*----------------CALENDRIER--------------*/
@@ -611,6 +711,13 @@ width: 41em;
 .contact-form {
 	margin-right: 1em;
 	margin-bottom: 4em;
+
+	h3 {
+		background-image: url("../images/icones/form.png");
+		background-size: 19px;
+		background-repeat: no-repeat;
+	}
+
 	label {
 		display: block;
 		margin-bottom: 0.2em;
@@ -619,7 +726,6 @@ width: 41em;
 		font-family: @folksR;
 		width: 17em;
 		height: 2.2em;
-		margin-bottom: 1em;
 		background-color: @bleu;
 		border: none;
 		color: #ffffff;
@@ -663,8 +769,38 @@ width: 41em;
 	}
 }
 
+.contact-address {
+		h3 {
+		background-image: url("../images/icones/address.png");
+		background-size: 13px;
+		background-repeat: no-repeat;
+	}
+}
 
+.contact-post {
+	h3 {
+		background-image: url("../images/icones/post.png");
+		background-size: 19px;
+		background-repeat: no-repeat;
+	}
+}
 
+.contact-email {
+	h3 {
+		background-image: url("../images/icones/email.png");
+		background-size: 19px;
+		background-repeat: no-repeat;
+	}
+}
+
+.contact-phone {
+	h3 {
+		background-image: url("../images/icones/phone.png");
+		background-size: 20px;
+		background-position: 0px;
+		background-repeat: no-repeat;
+	}
+}
 
 #envoyer {
 	font-family: @oswald;
@@ -684,12 +820,17 @@ width: 41em;
 	}
 }
 
-.contact-particulars>div {
+.contact-particulars>div>div {
 	margin-bottom: 4em;
 }
 
 .visit {
 	clear: both;
+}
+
+#visit-map {
+	height: 400px;
+	width:945px;
 }
 
 .visit-acces {
@@ -698,20 +839,87 @@ width: 41em;
 	}
 
 	p:first-child,ul {
-		margin-right: 1.3em;
+		margin-right: 1.25em;
 	}
 }
 
 .inscription-member1,.inscription-member2 {
 	float: left;
+	width:30.7em;
+		li {
+		background-image: url('../images/check.png');
+		background-repeat: no-repeat;
+		padding-left: 1.5em;
+	}
+
+	.compte li {
+		background-image: none;
+	}
 }
 
 .inscription-member1 {
-	margin-right: 1em;
+	margin-right: 1.25em;
+	position: relative;
+
+	>div{
+		margin-bottom: 0.6em;
+	}
+
+		p {
+		margin-top: 1em;
+	}
+
+	&:after{
+		content:"";
+		height: 60px;
+		width: 100px;
+		position: absolute;
+		background-image: url('../images/icones/inscri-arrow.png');
+		top: 18em;
+		right: 12em;
+		background-size: 100px;
+		background-repeat: no-repeat;
+	}
+}
+
+.inscription
+
+{ span {
+	font-family: @oswald;
+	color: @bleu;
+	display: block;
+	text-align: center;
+
+}
+
+	ul {
+		margin: 1em 0 1em 0;
+	}
+
+	.compte {
+		text-align: center;
+		margin-top: 1em;
+	}
 }
 
 .inscription-note {
 	clear: both;
+	text-align: center;
+	padding-top: 2em;
+	margin-bottom: 1em;
+
+	.telecharger {
+		font-family: @oswald;
+		text-transform: uppercase;
+		position: relative;
+		top: 0.8em;
+		font-size: 1.2em;
+	}
 }
+
+
 /*----------------FORUM--------------*/
 
+#cboxLoadedContent img {
+  max-width: none;
+}
