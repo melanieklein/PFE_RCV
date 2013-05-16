@@ -71,12 +71,12 @@
 ?>
 
 <div class="page">
-
   <header role="banner">
-
         <?php if ($site_name): ?>
           <h1 class="outliner"><?php print $site_name; ?></h1>
         <?php endif; ?>
+
+        <?php print render($page['header']); ?>
 
         <?php if ($secondary_menu): ?>
       <nav class="menu-login" role="navigation">
@@ -122,7 +122,7 @@
       <a href="<?php print $front_page; ?>" title="<?php print $site_name; ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" width="200" height="200" alt="<?php print $site_name; ?>" /></a>
     <?php endif; ?>
 
-    <?php print render($page['header']); ?>
+
 
   </header>
 

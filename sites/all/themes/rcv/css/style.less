@@ -75,9 +75,10 @@ table {
 @folksL: 'FolksLightRegular';
 
 @grisFonce: #666666;
-@grisClair: #dfe6e4;
-@bleu: #33979F;
-@bleuFonce: #005656;
+@grisClair: #DFE6E4;
+@blanc: #FAFBFC;
+@bleu: #34549D;
+@bleuFonce: #1E3456;
 
 /*----INTERFACE ADMIN----*/
 .primary li {
@@ -89,9 +90,9 @@ table {
 /*----STYLE GENERAL----*/
 
 body {
-	font-size:15px;
+	font-size:16.5px;
 	font-family: @folksR;
-	background:url('../images/motifBody.png') repeat;
+	background:url('../images/motifBody.jpg') repeat;
 	color: @grisFonce;
 	line-height: 1.3em;
 }
@@ -122,7 +123,7 @@ h2 {
 	position: absolute;
 	height: 70px;
 	background: url('../images/ruban.png') no-repeat;
-	background-size: 1054px;
+	background-size: 1157px;
 	font-family: @oswald;
 	text-transform: uppercase;
 	font-size: 1.3em;
@@ -154,7 +155,7 @@ h3 {
 }
 
 .page {
-	background-color: #f2f8f8;
+	background-color: @blanc;
 	width:67.5em;
 	margin:0 auto;
 	display:table;
@@ -162,27 +163,27 @@ h3 {
 }
 
 input[type="submit"] {
-	background-color: @bleu;
-	font-family: @oswald;
-	text-transform: uppercase;
-	font-size: 1.1em;
-	height: 1.8em;
-	border-radius: 6px;
-	cursor: pointer;
-	box-shadow: none;
-	border: none;
-	color: #FFFFFF;
+	background-color: @bleu !important;
+	font-family: @oswald !important;
+	text-transform: uppercase !important;
+	font-size: 1.1em !important;
+	height: 1.8em !important;
+	border-radius: 6px !important;
+	cursor: pointer !important;
+	box-shadow: none !important;
+	border: none !important;
+	color: @blanc !important;
 
 	&:hover {
-		color:@bleu;
-		background-color: #f2f8f8;
+		color:@bleu !important;
+		background-color: @blanc!important;
 	}
 }
 
 
 header {
 	height:10em;
-	background-image:url('../images/motifH.png');
+	background-image:url('../images/motifH.jpg');
 	background-repeat: repeat;
 	margin-bottom: 6em;
 	position: relative;
@@ -198,18 +199,18 @@ header {
 	box-shadow: 0px 1px 2px @grisFonce;
 
 	a {
-		color: #ffffff
+		color: @blanc;
 	}	
 	
 	a:hover{
-		color: @bleu;
+		color: @bleuFonce;
 		text-decoration: none;
 		
 	}
 
 	ul {
 		display: block;
-		width: 62em;
+		width: 62.68em;
 		margin: 0 auto;
 	}
 
@@ -232,25 +233,22 @@ header {
 
 		&:hover div{
 		visibility: visible;
+		}
 	}
-	}
-
-
 }
 
-.menu-login {
-
+.login-menu, .menu-login {
 	float: right;
-	padding: 0.5em;
-
+	padding: 0.5em 0em;
 	li {
 		display: inline-block;
 		margin-left: 0.5em;
+		margin-right: 0.5em;
 	}
 	a {
-		color: @grisClair;
+		color: @blanc;
 		&:hover {
-			color: @bleuFonce;
+			text-decoration: underline;
 		}
 	}
 }
@@ -279,13 +277,12 @@ header {
 			padding:0 !important;
 		}
 	}
-
 }
 
 #logo {
 	position: absolute;
 	top: 3em;
-	right: 27.04em;
+	right: 27.7em;
 	z-index: 10;
 	&:hover{
 		background-color: transparent;
@@ -300,7 +297,8 @@ header {
 	}
 
 	li {
-				background-image: url('../images/check.png');
+		background-image: url('../images/check.png');
+		background-size: 16px;
 		background-repeat: no-repeat;
 		padding-left: 1.5em;
 		margin-bottom:1em;
@@ -308,7 +306,7 @@ header {
 	}
 	
 	ul:first-child {
-		margin-right: 1.25em;
+		margin-right: 1.28em;
 	}
 
 }
@@ -337,7 +335,7 @@ header {
 	width: 12.459em;
 }
 
-.col4{
+.col4 {
 	width: 17.8em;
 }
 
@@ -345,18 +343,65 @@ header {
 	width: 39.06em;
 }
 
-.col6{
-	width:28.43em;
+.col6 {
+	width:28.429em;
 }
 
 .colb6 {
-	width: 30.7em;
+	width: 30.68em;
 }
 
 .colb4 {
 	width:20.05em;
 }
 
+/*--------------FORUM-----------*/
+
+.forum {
+	padding: 0;
+	h3 {
+		background-image: url("../images/icones/forum.png");
+		background-size: 19px;
+		background-repeat: no-repeat;
+	}
+}
+
+.forum table {
+	background-color: none;
+	border: 2px solid @bleu;
+
+	thead tr {
+		background-color: @grisClair;
+		border: 2px solid @bleu;
+	}
+	th {
+		padding: 1em 0em;
+	}
+
+	tbody tr {
+		background-color: transparent !important;
+	}
+}
+
+
+.forum-list-legend-item span>span {
+	background-size: 30px !important;
+	margin-bottom: 0 !important;
+}
+
+.forum-statistics {
+	border: 2px solid @bleu;
+}
+
+.forum-statistics-header {
+background-color: @grisClair;
+border-bottom: 2px solid @bleu;
+padding: 0.5em;
+}
+
+.forum-statistics-sub-header, .forum-statistics-sub-body {
+	background-color: transparent !important;
+}
 
 
 /*----------------ACCUEIL--------------*/
@@ -377,7 +422,7 @@ header {
 }
 
 .news-contest {
-	margin-right: 1.25em;
+	margin-right: 1.28em;
 	height: 240px;
 	h3 {
 		background-image: url("../images/icones/contest.png");
@@ -402,7 +447,7 @@ header {
 }
 
 .news-photos {
-		margin-right: 1.25em;
+		margin-right: 1.28em;
 		clear: both;
 
 		h3 {
@@ -453,7 +498,7 @@ header {
 	}
 	p{
 		position: absolute;
-		background-color: rgba(51,151,158,.6);
+		background-color: rgba(52,84,157,.6);
 		padding: 1em;
 		text-align: center;
 		color: white;
@@ -472,9 +517,10 @@ header {
 
 		li {
 			margin-bottom: 1em;
-					background-image: url('../images/check.png');
-		background-repeat: no-repeat;
-		padding-left: 1.5em;
+			background-image: url('../images/check.png');
+			background-size: 16px;
+			background-repeat: no-repeat;
+			padding-left: 1.5em;
 		}
 	}
 
@@ -544,10 +590,10 @@ header {
 
 .member-email {
 	position: absolute;
-	top: 8.5em;
+	top: 9.5em;
 	width: 235px;
 	height: 40px;
-	right: -0.8em;
+	right: 0.9em;
 
 	button {
 		height: 39px;
@@ -565,16 +611,16 @@ header {
 
 	a {
 		visibility: hidden;
-		color:  #FFFFFF;
+		color:  @blanc;
 	}
 }
 
 .member-phone {
 	position: absolute;
-	top: 11em;
+	top: 12em;
 	width: 235px;
 	height: 40px;
-	right: -0.8em;
+	right: 0.9em;
 
 	button {
 		height: 39px;
@@ -592,7 +638,7 @@ header {
 
 	em {
 		visibility: hidden;
-		color:  #FFFFFF;
+		color:  @blanc;
 	}
 }
 
@@ -604,7 +650,7 @@ header {
 	}
 }
 
-.links {
+.links-others {
 	clear: both;
 
 	>div {
@@ -643,16 +689,21 @@ header {
 /*----------------CALENDRIER--------------*/
 
 /*----------------ARCHIVES--------------*/
+.concours >div {
+	height: 13em;
+}
+
 .concours-interclubs, .concours-provincial, .concours-national, .concours-etrangers {
 	float:left;
 }
 
 .concours-interclubs, .concours-provincial, .concours-national {
-	margin-right: 1em;
+	margin-right: 1.28em;
 }
 
 .photos {
 	clear: both;
+	margin-top: 0;
 
 	li{
 		list-style-type: none;
@@ -709,7 +760,7 @@ header {
 }
 
 .contact-form {
-	margin-right: 1em;
+	margin-right: 1.28em;
 	margin-bottom: 4em;
 
 	h3 {
@@ -830,7 +881,8 @@ header {
 
 #visit-map {
 	height: 400px;
-	width:945px;
+	width:1030px;
+	border: 2px solid @bleu;
 }
 
 .visit-acces {
@@ -845,9 +897,10 @@ header {
 
 .inscription-member1,.inscription-member2 {
 	float: left;
-	width:30.7em;
+	width:30.68em;
 		li {
 		background-image: url('../images/check.png');
+		background-size: 16px;
 		background-repeat: no-repeat;
 		padding-left: 1.5em;
 	}
@@ -858,7 +911,7 @@ header {
 }
 
 .inscription-member1 {
-	margin-right: 1.25em;
+	margin-right: 1.28em;
 	position: relative;
 
 	>div{
@@ -869,7 +922,7 @@ header {
 		margin-top: 1em;
 	}
 
-	&:after{
+	/*&:after{
 		content:"";
 		height: 60px;
 		width: 100px;
@@ -879,7 +932,7 @@ header {
 		right: 12em;
 		background-size: 100px;
 		background-repeat: no-repeat;
-	}
+	}*/
 }
 
 .inscription

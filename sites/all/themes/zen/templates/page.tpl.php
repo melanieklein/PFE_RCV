@@ -92,6 +92,13 @@
       </hgroup><!-- /#name-and-slogan -->
     <?php endif; ?>
 
+    <?php
+    if ($user->uid < 0):
+    ?>
+    <a href="#">Se connecter</a>
+    <?php  
+    endif;?>
+
     <?php if ($secondary_menu): ?>
       <nav id="secondary-menu" role="navigation">
         <?php print theme('links__system_secondary_menu', array(
