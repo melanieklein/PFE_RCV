@@ -26,9 +26,9 @@
 ?>	
 <li><div class="realisations-video"><?php print render($row->field_field_lien_youtube); ?></div>
 	<div class="realisations-infos">
-		<h3><a href="<?php print render($view->base_table);?>/<?php print render($row->nid);?>"><?php print render($row->node_title); ?></a></h3>
-		<p><?php print render($row->field_field_auteur);?></p>
-		<p><?php print render($row->field_field_date_publication);?></p>
-			<p><?php print render($row->field_field_description);?></p>
+		<h3 class="with-icon"><?php print ($fields['title']->content);?></h3>
+		<a href="#"><?php print render($row->field_field_auteur);?></a>
+		<p class="infos-date"><?php print render($row->field_field_date_publication);?></p>
+		<p class="infos-description"><?php print render($row->field_field_description);?></p>
 	</div>
 </li>	

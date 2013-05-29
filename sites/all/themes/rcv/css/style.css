@@ -168,30 +168,30 @@ a:hover {
 .section {
   width: 62.65em;
   margin: 0 auto;
-  margin-top: 4em;
   position: relative;
+  margin-top: 2em;
   padding-top: 4em;
 }
 h2 {
   width: 51.3em;
   position: absolute;
-  height: 70px;
-  background: url('../images/ruban.png') no-repeat;
-  background-size: 1157px;
+  background: url('../images/sprite.png') no-repeat -1px 0;
+  background-size: 1168px 573px;
+  height: 67px;
   font-family: 'Oswald';
   text-transform: uppercase;
   font-size: 1.3em;
   color: #FFFFFF;
   text-shadow: -1px -1px 0px #666666;
   top: -1em;
-  left: -2.88em;
+  left: -3.1em;
   padding: 0.8em 0em 0em 2.9em;
 }
 .bloc {
   background-color: #dfe6e4;
   border: 2px solid #34549d;
   padding: 1em;
-  margin-bottom: 0.8em;
+  margin-bottom: 1.28em;
 }
 h3 {
   font-family: 'Oswald';
@@ -209,6 +209,7 @@ h3 {
   margin: 0 auto;
   display: table;
   box-shadow: 0px 2px 8px #666666;
+  position: relative;
 }
 input[type="submit"] {
   background-color: #34549d !important;
@@ -218,7 +219,6 @@ input[type="submit"] {
   height: 1.8em !important;
   border-radius: 6px !important;
   cursor: pointer !important;
-  box-shadow: none !important;
   border: none !important;
   color: #fafbfc !important;
 }
@@ -230,34 +230,43 @@ header {
   height: 10em;
   background-image: url('../images/motifH.jpg');
   background-repeat: repeat;
-  margin-bottom: 6em;
   position: relative;
+  width: 67.5em;
+  margin: 0 auto;
+  z-index: 0;
 }
 .menu-nav {
   clear: both;
-  background-color: #666666;
-  padding: 1em 0em 1em 0em;
   position: relative;
   top: 6.2em;
   margin: 0 auto;
-  box-shadow: 0px 1px 2px #666666;
 }
 .menu-nav a {
-  color: #fafbfc;
+  text-decoration: none;
+  font-family: 'Oswald';
+  font-size: 1.1em;
+  text-transform: uppercase;
+  padding: 0.5em 0.4em;
+  background-color: #dfe6e4;
+  border-radius: 2px;
+  position: relative;
+  -webkit-transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-duration: 0.2s;
+  -moz-transition-timing-function: ease-out;
+  top: 0.1em;
 }
 .menu-nav a:hover {
-  color: #1e3456;
-  text-decoration: none;
+  top: -0.34em;
 }
 .menu-nav ul {
   display: block;
-  width: 62.68em;
+  width: 62.5em;
   margin: 0 auto;
 }
 .menu-nav li {
   display: inline-block;
-  margin: 0 2.3em 0 2.3em;
-  position: relative;
+  margin: 0 1.15em 0 1.15em;
 }
 .menu-nav li:first-child {
   margin-left: 0;
@@ -285,6 +294,7 @@ header {
 .login-menu a,
 .menu-login a {
   color: #fafbfc;
+  text-decoration: none;
 }
 .login-menu a:hover,
 .menu-login a:hover {
@@ -292,6 +302,7 @@ header {
 }
 .search-form {
   margin-bottom: 0;
+  float: left;
 }
 .second-menu {
   position: absolute;
@@ -314,7 +325,7 @@ header {
 }
 #logo {
   position: absolute;
-  top: 3em;
+  top: -6.5em;
   right: 27.7em;
   z-index: 10;
 }
@@ -326,9 +337,8 @@ header {
   float: left;
 }
 .intro-text li {
-  background-image: url('../images/check.png');
-  background-size: 16px;
-  background-repeat: no-repeat;
+  background: url('../images/sprite.png') no-repeat -714px -432px;
+  background-size: 1158px 573px;
   padding-left: 1.5em;
   margin-bottom: 1em;
   line-height: 1.3em;
@@ -338,20 +348,48 @@ header {
 }
 .inscription-invite {
   clear: both;
-  background-image: url('../images/camera.png');
-  background-repeat: no-repeat;
-  background-size: 45px auto;
+  background: url('../images/sprite.png') no-repeat -1px -417px;
+  background-size: 1158px 573px;
+  height: 44px;
   padding-left: 3em;
   padding-top: 1em;
   font-size: 1.3em;
-  margin-top: 1em;
+  float: right;
+  margin-bottom: 3em;
+  width: 442px;
 }
 .inscription-invite p {
   font-family: 'Oswald';
   margin-bottom: 0.2em;
 }
 .inscription-invite a {
-  font-family: 'FolksRegular';
+  background: #34549d url('../images/icones/buttonArrow.png') no-repeat 10px 8px;
+  background-size: 14px;
+  text-transform: uppercase;
+  font-family: 'Oswald';
+  border-radius: 6px;
+  height: 1.4em;
+  color: #fafbfc;
+  font-size: 0.9em;
+  padding: 0.3em 0.6em 0em 2em;
+  position: relative;
+  top: 0.4em;
+  float: right;
+  right: 4em;
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.26);
+  -moz-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.26);
+  -webkit-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.26);
+  -webkit-transition: background 0.5s;
+  -moz-transition: background 0.5s;
+  transition: background 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+}
+.inscription-invite a:hover {
+  text-decoration: none;
+  color: #34549d;
+  background: #dfe6e4 url('../images/icones/buttonArrowB.png') no-repeat 10px 8px;
+  background-size: 14px;
 }
 .col3 {
   width: 12.459em;
@@ -371,14 +409,86 @@ header {
 .colb4 {
   width: 20.05em;
 }
+/*-------------BREADCRUMB--------*/
+.breadcrumb {
+  width: 62.5em;
+  margin: 0 auto;
+  margin-top: 6.5em;
+}
+.breadcrumb li {
+  display: inline-block;
+}
+/*-------------LOGIN & REGISTER--------*/
+#user-login,
+#user-register-form {
+  width: 62.65em;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 4em;
+  padding-top: 4em;
+}
+#user-login .description,
+#user-register-form .description {
+  margin-top: 0.4em;
+  line-height: 1.2em;
+}
+#user-login > div:first-child,
+#user-register-form > div:first-child {
+  width: 28.429em;
+  background-color: #dfe6e4;
+  border: 2px solid #34549d;
+  padding: 1em;
+}
+#user-login label,
+#user-register-form label {
+  margin-bottom: 0.2em;
+}
+#user-login input,
+#user-register-form input {
+  font-family: 'FolksRegular';
+  width: 17em;
+  height: 2.2em;
+  background-color: #fafbfc;
+  border: none;
+  color: #1e3456;
+  padding-left: 0.5em;
+  font-size: 1em;
+  border: 1px #eee solid;
+  -webkit-box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.25);
+  -ms-box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.25);
+}
+#user-login input[type="submit"] {
+  width: 6em;
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.26);
+  -moz-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.26);
+  -webkit-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.26);
+  -webkit-transition: background 0.5s;
+  -moz-transition: background 0.5s;
+  transition: background 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+}
+#user-register-form input[type="submit"] {
+  width: 12em;
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.26);
+  -moz-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.26);
+  -webkit-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.26);
+  -webkit-transition: background 0.5s;
+  -moz-transition: background 0.5s;
+  transition: background 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+}
 /*--------------FORUM-----------*/
 .forum {
   padding: 0;
 }
 .forum h3 {
-  background-image: url("../images/icones/forum.png");
-  background-size: 19px;
-  background-repeat: no-repeat;
+  background: url('../images/sprite.png') no-repeat -1px -158px;
+  background-size: 1158px 573px;
+  height: 20px;
 }
 .forum table {
   background-color: none;
@@ -411,6 +521,45 @@ header {
   background-color: transparent !important;
 }
 /*----------------ACCUEIL--------------*/
+.news-contest .more-link a,
+.news-forum .more-link a,
+.news-calendar .more-link a,
+.news-videos .more-link a,
+.news-photos .more-link a {
+  background: #34549d url('../images/icones/buttonArrow.png') no-repeat 10px 10px;
+  background-size: 14px;
+  text-transform: uppercase;
+  font-family: 'Oswald';
+  border-radius: 6px;
+  height: 1.4em;
+  color: #fafbfc;
+  padding: 0.3em 0.6em 0.3em 1.8em;
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.26);
+  -moz-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.26);
+  -webkit-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.26);
+  -webkit-transition: background 0.5s;
+  -moz-transition: background 0.5s;
+  transition: background 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+}
+.news-contest .more-link a:hover,
+.news-forum .more-link a:hover,
+.news-calendar .more-link a:hover,
+.news-videos .more-link a:hover,
+.news-photos .more-link a:hover {
+  text-decoration: none;
+  color: #34549d;
+  background: #fafbfc url('../images/icones/buttonArrowB.png') no-repeat 10px 10px;
+  background-size: 14px;
+}
+.news-videos .more-link a:hover,
+.news-photos .more-link a:hover {
+  text-decoration: none;
+  color: #34549d;
+  background: #dfe6e4 url('../images/icones/buttonArrowB.png') no-repeat 10px 10px;
+  background-size: 14px;
+}
 .presentation-video {
   margin: 0 auto;
   width: 854px;
@@ -422,64 +571,114 @@ header {
 .news-videos {
   float: left;
 }
+.news {
+  clear: both;
+}
 .news-forum h3 {
-  background-image: url("../images/icones/forum.png");
-  background-size: 19px;
-  background-repeat: no-repeat;
+  background: url('../images/sprite.png') no-repeat -4px -159px;
+  background-size: 1158px 573px;
+  height: 20px;
+  width: 260px;
+}
+.news-forum .view-content {
+  margin-bottom: 1.5em;
+}
+.news-forum .views-row {
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.5em;
+}
+.news-forum .views-row > span:first-of-type {
+  display: inline-block;
+  width: 10em;
 }
 .news-contest {
   margin-right: 1.28em;
-  height: 240px;
+  height: 26.45em;
 }
 .news-contest h3 {
-  background-image: url("../images/icones/contest.png");
-  background-size: 19px;
-  background-repeat: no-repeat;
+  background: url('../images/sprite.png') no-repeat -4px -125px;
+  background-size: 1158px 573px;
+  height: 20px;
 }
-.acces {
+.news-contest .view-content {
+  margin-bottom: 1.5em;
+}
+.news-contest .views-row {
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.5em;
+}
+.news-contest .views-row > span:first-of-type {
+  display: inline-block;
+  width: 10em;
+}
+.news-contest .acces {
   float: right;
 }
 .news-calendar h3 {
-  background-image: url("../images/icones/calendar.png");
-  background-size: 19px;
-  background-repeat: no-repeat;
+  background: url('../images/sprite.png') no-repeat -4px -319px;
+  background-size: 1158px 573px;
+  height: 21px;
+  width: 260px;
 }
 .news-calendar li {
   margin: 0 !important;
+}
+.news-calendar .view-content {
+  margin-bottom: 1.5em;
+}
+.news-calendar .views-row {
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.5em;
+}
+.news-calendar .views-row > span:first-of-type {
+  display: inline-block;
+  width: 10em;
 }
 .news-photos {
   margin-right: 1.28em;
   clear: both;
 }
 .news-photos h3 {
-  background-image: url("../images/icones/photos.png");
-  background-size: 19px;
-  background-repeat: no-repeat;
+  background: url('../images/sprite.png') no-repeat -4px -353px;
+  background-size: 1158px 573px;
+  height: 20px;
 }
 .news-photos li {
   list-style-type: none;
+  margin-bottom: 1.28em;
+}
+.news-photos .view-content {
+  margin-bottom: 1.5em;
 }
 .news-videos h3 {
-  background-image: url("../images/icones/videos.png");
-  background-size: 16px;
-  background-repeat: no-repeat;
+  background: url('../images/sprite.png') no-repeat -4px -383px;
+  background-size: 1158px 573px;
+  height: 20px;
 }
 .news-videos li {
-  margin-bottom: 1em;
+  margin-bottom: 1.28em;
   list-style-type: none;
 }
-.news-videos-infos {
-  float: right;
-  width: 14.7em;
+.news-videos .view-content {
+  margin-bottom: 1.5em;
 }
+.news-photos img,
+.news-videos img,
+.photos img,
+.album-photos img {
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.26);
+  -moz-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.26);
+  -webkit-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.26);
+}
+.news-videos-infos,
 .news-photos-infos {
   float: right;
   width: 14.7em;
 }
 /*----------------LECLUB--------------*/
-.activities {
-  margin-top: 7em;
-}
 .activities-intro p,
 .activities-intro div {
   float: left;
@@ -500,15 +699,20 @@ header {
   margin-bottom: 5em;
 }
 .activities-details > div ul li {
-  margin-bottom: 1em;
-  background-image: url('../images/check.png');
-  background-size: 16px;
-  background-repeat: no-repeat;
+  background: url('../images/sprite.png') no-repeat -714px -431px;
+  background-size: 1158px 573px;
   padding-left: 1.5em;
+  margin-bottom: 1em;
+  line-height: 1.3em;
 }
 .activities-details > ul {
   text-align: center;
   margin-bottom: 2em;
+  background: url('../images/sprite.png') no-repeat -461px -155px;
+  background-size: 1158px 573px;
+  width: 525px;
+  height: 148px;
+  margin: 0 auto;
 }
 .activities-details > ul li:last-child {
   margin-top: 2em;
@@ -518,6 +722,7 @@ header {
 }
 .activities-details div h4 {
   text-align: center;
+  margin-bottom: 0.3em;
 }
 .activities-details em {
   color: #34549d;
@@ -529,6 +734,7 @@ header {
 }
 .comite {
   clear: both;
+  height: 58em;
 }
 .comite-members > div {
   float: left;
@@ -553,6 +759,9 @@ header {
 .comite-members > div:last-child {
   margin-right: 0;
 }
+.comite-members img {
+  box-shadow: 0px 0px 5px #666666;
+}
 .member-email {
   position: absolute;
   top: 9.5em;
@@ -561,21 +770,33 @@ header {
   right: 0.9em;
 }
 .member-email button {
+  background: url('../images/sprite.png') no-repeat -1px -488px;
+  background-size: 1158px 573px;
+  width: 40px;
+  height: 38px;
   height: 39px;
-  background-image: url('../images/icones/member-email.png');
-  background-repeat: no-repeat;
-  background-size: 40px;
   border: none;
   background-color: transparent;
-  width: 44px;
   cursor: pointer;
 }
 .member-email button:hover + a {
+  width: 180px;
   visibility: visible;
 }
 .member-email a {
+  background-color: #34549d;
+  position: relative;
+  top: 0.413em;
+  right: 0.3em;
+  display: inline-block;
   visibility: hidden;
+  width: 0px;
   color: #fafbfc;
+  padding: 0.2425em;
+  -webkit-transition: width 0.25s ease-in-out, visibility 0.25s ease-in-out;
+  -moz-transition: width 0.25s ease-in-out, visibility 0.25s ease-in-out;
+  -o-transition: width 0.25s ease-in-out, visibility 0.25s ease-in-out;
+  transition: width 0.25s ease-in-out, visibility 0.25s ease-in-out;
 }
 .member-phone {
   position: absolute;
@@ -585,13 +806,13 @@ header {
   right: 0.9em;
 }
 .member-phone button {
+  background: url('../images/sprite.png') no-repeat -1px -535px;
+  background-size: 1158px 573px;
+  width: 40px;
+  height: 38px;
   height: 39px;
-  background-image: url('../images/icones/member-phone.png');
-  background-repeat: no-repeat;
-  background-size: 40px;
   border: none;
   background-color: transparent;
-  width: 44px;
   cursor: pointer;
 }
 .member-phone button:hover + em {
@@ -608,6 +829,23 @@ header {
 .member-nom-fonction h3 {
   margin-bottom: 0.2em;
 }
+#club-histoire {
+  width: 1033px;
+  height: 560px;
+}
+#club-histoire .turn-page {
+  background-color: #DFE6E4;
+  height: 560px;
+}
+#club-histoire .turn-page p {
+  width: 465px;
+}
+.page-content {
+  padding: 2em;
+}
+.page-content p {
+  margin-bottom: 1em;
+}
 .links-others {
   clear: both;
 }
@@ -622,7 +860,7 @@ header {
 }
 /*----------------REALISATIONS--------------*/
 .realisations li {
-  margin-bottom: 2em;
+  margin-bottom: 2.5em;
   list-style-type: none;
 }
 .realisations-video {
@@ -632,7 +870,96 @@ header {
   float: right;
   width: 30.7em;
 }
-/*----------------CALENDRIER--------------*/
+.realisations-infos h3 {
+  background: url('../images/sprite.png') no-repeat -4px -383px;
+  background-size: 1158px 573px;
+  height: 21px;
+  margin-bottom: 0.1em;
+}
+.realisations-infos .infos-date {
+  font-style: italic;
+  font-size: 0.9em;
+}
+.realisations-infos .infos-description {
+  margin-top: 1em;
+}
+.realisation {
+  padding-top: 0;
+}
+.realisation h3 {
+  background: url('../images/sprite.png') no-repeat -4px -384px;
+  background-size: 1158px 573px;
+  height: 20px;
+  margin-bottom: 0.1em;
+}
+.realisation-date {
+  font-style: italic;
+  font-size: 0.9em;
+}
+.realisation-description {
+  margin: 1em 0em 1em 0em;
+}
+.videos-retour {
+  float: right;
+}
+/*----------PAGE 1 CONCOURS-----------¨*/
+.concours-resultats {
+  padding-top: 0;
+}
+.concours-resultats h3 {
+  background: url('../images/sprite.png') no-repeat -4px -125px;
+  background-size: 1158px 573px;
+  height: 20px;
+  margin-bottom: 0.1em;
+}
+.concours-resultats-date {
+  font-style: italic;
+  font-size: 0.9em;
+}
+.concours-resultats-tableau {
+  margin: 1em 0em 1.5em 0em;
+}
+.concours-resultats-tableau table {
+  width: 100%;
+}
+.concours-resultats-tableau table thead {
+  background-color: #34549d;
+  color: #fafbfc;
+}
+.concours-resultats-tableau table thead th {
+  padding: 0.4em;
+}
+.concours-resultats-tableau table tbody td {
+  padding: 0.4em;
+}
+.concours-resultats-tableau table tbody tr {
+  border-bottom: 1px solid #ccc;
+  background-color: transparent;
+}
+.concours-retour {
+  float: right;
+}
+/*---------------EVENEMENTS------------*/
+.calendrier-events {
+  margin-bottom: 4em;
+}
+.calendrier-event {
+  margin-bottom: 1.5em;
+}
+.calendrier-event h3 {
+  background: url('../images/sprite.png') no-repeat -4px -319px;
+  background-size: 1158px 573px;
+  height: 21px;
+  width: 260px;
+  margin-bottom: 0.1em;
+}
+.event-categorie {
+  font-style: italic;
+  font-size: 0.9em;
+}
+.event-description {
+  margin-top: 1em;
+}
 /*----------------ARCHIVES--------------*/
 .concours > div {
   height: 13em;
@@ -643,6 +970,14 @@ header {
 .concours-etrangers {
   float: left;
 }
+.concours-interclubs .views-row,
+.concours-provincial .views-row,
+.concours-national .views-row,
+.concours-etrangers .views-row {
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.5em;
+}
 .concours-interclubs,
 .concours-provincial,
 .concours-national {
@@ -652,35 +987,47 @@ header {
   clear: both;
   margin-top: 0;
 }
+.photos .views-row {
+  float: left;
+  width: 30.68em;
+  margin-right: 1.28em;
+}
+.photos .views-row:nth-child(2) {
+  margin-right: 0em;
+}
 .photos li {
   list-style-type: none;
 }
 /*-----ALBUM PHOTOS-----*/
 .album-photos {
-  width: 63em;
-  margin: 0 auto;
+  padding-top: 0;
 }
 .album-photos h3 {
-  margin-bottom: 0.2em;
+  background: url('../images/sprite.png') no-repeat -4px -352px;
+  background-size: 1158px 573px;
+  height: 20px;
+  margin-bottom: 0.1em;
 }
 .album-photos span {
-  font-size: 0.95em;
-  color: #34549d;
+  font-size: 0.9em;
+  font-style: italic;
 }
 .album-photos ul {
-  margin-top: 1.3em;
+  margin: 1em 0em 1.5em 0em;
 }
 .album-photos li {
   display: inline-block;
-  margin-right: 1.1em;
-  margin-bottom: 0.6em;
+  margin: 0.49em;
 }
-.album-photos li img {
-  box-shadow: 0px 0px 5px #666666;
+.album-photos-description {
+  margin-top: 0.4em;
+}
+.photos-retour {
+  float: right;
 }
 .photos-albums-infos {
   float: right;
-  width: 46.7em;
+  width: 14.8em;
 }
 /*----------------CONTACT--------------*/
 .contact-text {
@@ -695,10 +1042,21 @@ header {
   margin-right: 1.28em;
   margin-bottom: 4em;
 }
+.contact-form input[type="submit"] {
+  width: 10em;
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.26);
+  -moz-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.26);
+  -webkit-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.26);
+  -webkit-transition: background 0.5s;
+  -moz-transition: background 0.5s;
+  transition: background 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+}
 .contact-form h3 {
-  background-image: url("../images/icones/form.png");
-  background-size: 19px;
-  background-repeat: no-repeat;
+  background: url('../images/sprite.png') no-repeat -4px -188px;
+  background-size: 1158px 573px;
+  height: 21px;
 }
 .contact-form label {
   display: block;
@@ -708,9 +1066,9 @@ header {
   font-family: 'FolksRegular';
   width: 17em;
   height: 2.2em;
-  background-color: #34549d;
+  background-color: #fafbfc;
   border: none;
-  color: #ffffff;
+  color: #1e3456;
   padding-left: 0.5em;
   font-size: 1em;
   border: 1px #eee solid;
@@ -741,12 +1099,11 @@ header {
 }
 .contact-form textarea {
   font-family: 'FolksRegular';
-  background-color: #34549d;
-  color: #ffffff;
+  background-color: #fafbfc;
+  color: #1e3456;
   font-size: 1em;
   border: none;
   padding: 0.5em;
-  width: 26.7em;
   height: 10em;
   margin-bottom: 1em;
   border: 1px #eee solid;
@@ -756,25 +1113,30 @@ header {
   box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.25);
 }
 .contact-address h3 {
-  background-image: url("../images/icones/address.png");
-  background-size: 13px;
-  background-repeat: no-repeat;
+  background: url('../images/sprite.png') no-repeat -716px -537px;
+  background-size: 1158px 573px;
+  height: 21px;
+  padding-left: 0.9em;
 }
 .contact-post h3 {
-  background-image: url("../images/icones/post.png");
-  background-size: 19px;
-  background-repeat: no-repeat;
+  background: url('../images/sprite.png') no-repeat -4px -224px;
+  background-size: 1158px 573px;
+  height: 19px;
 }
 .contact-email h3 {
-  background-image: url("../images/icones/email.png");
-  background-size: 19px;
-  background-repeat: no-repeat;
+  background: url('../images/sprite.png') no-repeat -4px -290px;
+  background-size: 1158px 573px;
+  height: 20px;
+  width: 48px;
+}
+.contact-phone {
+  margin-top: 4em;
 }
 .contact-phone h3 {
-  background-image: url("../images/icones/phone.png");
-  background-size: 20px;
-  background-position: 0px;
-  background-repeat: no-repeat;
+  background: url('../images/sprite.png') no-repeat -4px -255px;
+  background-size: 1158px 573px;
+  height: 19px;
+  width: 90px;
 }
 #envoyer {
   font-family: 'Oswald';
@@ -803,13 +1165,12 @@ header {
   width: 1030px;
   border: 2px solid #34549d;
 }
-.visit-acces p,
-.visit-acces ul {
-  float: left;
+.map-infos {
+  font-size: 0.9em;
 }
-.visit-acces p:first-child,
-.visit-acces ul {
-  margin-right: 1.25em;
+.visit-acces p {
+  margin-bottom: 1em;
+  width: 40em;
 }
 .inscription-member1,
 .inscription-member2 {
@@ -818,10 +1179,11 @@ header {
 }
 .inscription-member1 li,
 .inscription-member2 li {
-  background-image: url('../images/check.png');
-  background-size: 16px;
-  background-repeat: no-repeat;
+  background: url('../images/sprite.png') no-repeat -714px -432px;
+  background-size: 1158px 573px;
   padding-left: 1.5em;
+  margin-bottom: 1em;
+  line-height: 1.3em;
 }
 .inscription-member1 .compte li,
 .inscription-member2 .compte li {
@@ -878,4 +1240,720 @@ header {
 /*----------------FORUM--------------*/
 #cboxLoadedContent img {
   max-width: none;
+}
+.primary {
+  display: none;
+}
+/*---------FOOTER---------*/
+footer {
+  clear: both;
+  background-image: url('../images/motifH.jpg');
+  background-repeat: repeat;
+  color: #fafbfc;
+  top: 2.5em;
+  position: relative;
+  font-size: 0.9em;
+  height: 20em;
+}
+footer h3 {
+  color: #fafbfc;
+}
+footer a {
+  color: #fafbfc;
+}
+footer a:hover {
+  text-decoration: underline;
+  color: #fafbfc;
+}
+.footer-content {
+  width: 69.5em;
+  margin: 0 auto;
+  padding-top: 1.5em;
+}
+.footer-plan {
+  float: left;
+  margin-right: 1.55em;
+}
+.footer-plan > ul {
+  display: inline-block;
+  width: 16.2em;
+  vertical-align: top;
+}
+.footer-plan > ul:first-of-type {
+  margin-right: 1.55em;
+}
+.footer-plan > ul > li {
+  margin-bottom: 0.7em;
+}
+.footer-plan > ul > li ul li {
+  font-family: 'FolksLightRegular';
+  font-size: 0.98em;
+}
+.footer-plan em {
+  font-weight: bold;
+}
+.footer-contact {
+  float: left;
+  width: 16.2em;
+  margin-right: 1.55em;
+  font-family: 'FolksLightRegular';
+}
+.footer-adress {
+  background: url('../images/sprite.png') no-repeat -427px -332px;
+  background-size: 1158px 573px;
+  padding-left: 1.4em;
+  margin-bottom: 0.7em;
+  font-size: 0.98em;
+}
+.footer-post {
+  background: url('../images/sprite.png') no-repeat -431px -410px;
+  background-size: 1158px 573px;
+  padding-left: 1.4em;
+  width: 180px;
+  margin-bottom: 0.7em;
+  font-size: 0.98em;
+}
+.footer-email {
+  background: url('../images/sprite.png') no-repeat -431px -485px;
+  background-size: 1158px 573px;
+  height: 16px;
+  padding-left: 1.4em;
+  font-size: 0.98em;
+}
+.footer-phone {
+  background: url('../images/sprite.png') no-repeat -431px -527px;
+  background-size: 1158px 573px;
+  height: 19px;
+  width: 160px;
+  padding-left: 1.4em;
+  margin: 0.7em 0em 0.7em 0em;
+  font-size: 0.98em;
+}
+.footer-networks {
+  float: left;
+  width: 16.2em;
+}
+.network-facebook {
+  background: url('../images/sprite.png') no-repeat -380px -97px;
+  background-size: 1158px 573px;
+  width: 196px;
+  height: 40px;
+  padding: 0.4em 0em 0em 3em;
+}
+.network-youtube {
+  background: url('../images/sprite.png') no-repeat -380px -144px;
+  background-size: 1158px 573px;
+  width: 196px;
+  height: 36px;
+  padding: 0.4em 0em 0em 3em;
+}
+#footer-top {
+  float: right;
+  position: relative;
+  top: 0.8em;
+  cursor: pointer;
+}
+/*---------RESPONSIVE---------*/
+/* iPads (landscape) ----------- */
+@media only screen and (max-width: 1200px) {
+  .col3 {
+    width: 9.8em;
+  }
+  .col4 {
+    width: 14.2em;
+  }
+  .col6 {
+    width: 22.85em;
+  }
+  .col8 {
+    width: 31.51em;
+  }
+  .colb6 {
+    width: 25.1em;
+  }
+  .page {
+    width: 57.3em;
+  }
+  .section {
+    width: 51.2em;
+  }
+  header {
+    width: 57.3em;
+  }
+  h2 {
+    background-size: 991px;
+    left: -3.38em;
+  }
+  h3 {
+    font-size: 1.18em;
+  }
+  .with-icon {
+    padding-left: 1.4em;
+  }
+  #logo {
+    right: 23.4em;
+  }
+  #logo img {
+    width: 170px;
+    height: auto;
+  }
+  .menu-nav ul {
+    width: 51.2em;
+  }
+  .menu-nav li {
+    margin: 0 0.5em 0 0.5em;
+  }
+  .menu-nav li:nth-child(3) {
+    margin-right: 12.57em;
+  }
+  /*--ACCUEIL--*/
+  .intro-text ul:first-child,
+  .news-contest,
+  .news-photos {
+    margin-right: 1em;
+  }
+  .news-photos img,
+  .news-videos img {
+    width: 12.1em;
+    height: auto;
+  }
+  .news-photos-infos,
+  .news-videos-infos {
+    width: 12em;
+  }
+  /*--CLUB--*/
+  .activities-intro img {
+    width: 51.25em;
+    height: auto;
+  }
+  .activities-intro p {
+    top: 15em;
+  }
+  .activities-jeudi,
+  .links-fcvb {
+    margin-right: 1em;
+  }
+  .comite-members img {
+    width: 11.9em;
+    height: auto;
+  }
+  .comite-members > div {
+    margin: 0em 0.58em 2em 0.58em;
+  }
+  .comite-members h4 {
+    font-size: 0.9em;
+  }
+  .member-email,
+  .member-phone {
+    width: 193px;
+    right: 0.73em;
+  }
+  .member-email {
+    top: 6.5em;
+  }
+  .member-phone {
+    top: 9em;
+  }
+  #club-histoire {
+    width: 845px;
+    font-size: 0.9em;
+    line-height: 1.3em;
+  }
+  #club-histoire .turn-page {
+    width: 422px;
+  }
+  #club-histoire .turn-page p {
+    width: 383px;
+  }
+  /*--REALISATIONS--*/
+  .realisations-video iframe {
+    width: 414px;
+    height: 246px;
+  }
+  .realisations-infos {
+    width: 25em;
+  }
+  .infos-description {
+    margin-top: 0.7em;
+  }
+  /*--1 REALISATION--*/
+  .realisation-video {
+    width: 845px;
+    height: auto;
+  }
+  /*--EVENEMENTS--*/
+  .photos img {
+    width: 12em;
+    height: auto;
+  }
+  .photos-albums-infos {
+    width: 38.2em;
+  }
+  /*--1 ALBUM PHOTOS--*/
+  .album-photos li {
+    margin: 0.392em;
+  }
+  /*--CONCOURS--*/
+  .concours-interclubs,
+  .concours-provincial,
+  .concours-national {
+    margin-right: 1em;
+  }
+  .concours-interclubs > div,
+  .concours-provincial > div,
+  .concours-national > div,
+  .concours-etrangers > div {
+    font-size: 0.9em;
+  }
+  /*--CONTACT--*/
+  .contact-form {
+    margin-right: 1em;
+  }
+  #visit-map {
+    width: 842px;
+  }
+  .inscription-member1,
+  .inscription-member2 {
+    width: 25.1em;
+  }
+  .inscription-member1 {
+    margin-right: 1em;
+  }
+  /*--FOOTER--*/
+  .footer-content {
+    width: 56.9em;
+  }
+  .footer-plan {
+    margin-right: 1.2em;
+  }
+  .footer-plan > ul {
+    width: 13.3em;
+  }
+  .footer-plan > ul:first-of-type {
+    margin-right: 1.2em;
+  }
+  .footer-contact {
+    width: 13.4em;
+    margin-right: 1.2em;
+  }
+  .footer-networks {
+    width: 13.3em;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  body {
+    font-size: 15px;
+  }
+  .col3 {
+    width: 8.3em;
+  }
+  .col4 {
+    width: 12em;
+  }
+  .col6 {
+    width: 19.6em;
+  }
+  .col8 {
+    width: 27em;
+  }
+  .colb6 {
+    width: 21.1em;
+  }
+  .page {
+    width: 48.5em;
+  }
+  .section {
+    width: 44.2em;
+  }
+  header {
+    width: 48.5em;
+  }
+  h2 {
+    background-size: 763px;
+    left: -2.47em;
+    height: 44px;
+    width: 36.4em;
+    padding: 0.55em 0em 0em 2.4em;
+  }
+  h3 {
+    font-size: 0.96em;
+  }
+  .with-icon {
+    padding-left: 1.5em;
+  }
+  #logo {
+    right: 18.5em;
+  }
+  #logo img {
+    width: 170px;
+    height: 170px;
+  }
+  .menu-nav ul {
+    width: 44.2em;
+  }
+  .menu-nav li {
+    margin: 0 0.25em 0 0.25em;
+  }
+  .menu-nav li:nth-child(3) {
+    margin-right: 12em;
+  }
+  .menu-nav a {
+    font-size: 0.95em;
+  }
+  .menu-nav a:hover {
+    top: 0.1em;
+  }
+  /*--ACCUEIL--*/
+  .intro-text ul:first-child,
+  .news-contest,
+  .news-photos {
+    margin-right: 0.6em;
+  }
+  .news-photos img,
+  .news-videos img {
+    width: 9.6em;
+    height: auto;
+  }
+  .news-photos-infos,
+  .news-videos-infos {
+    width: 9.95em;
+  }
+  /*--CLUB--*/
+  .activities-intro img {
+    width: 44.2em;
+    height: auto;
+  }
+  .activities-intro p {
+    top: 14em;
+    padding: 0.5em;
+  }
+  .activities-jeudi,
+  .links-fcvb {
+    margin-right: 0.6em;
+  }
+  .comite-members img {
+    width: 10.5em;
+    height: auto;
+  }
+  .comite-members > div {
+    width: 10.5em;
+    height: 15.5em;
+    margin: 0em 0.35em 3em 0.35em;
+  }
+  .comite-members h4 {
+    font-size: 0.9em;
+    line-height: 1.2em;
+  }
+  .member-email,
+  .member-phone {
+    width: 193px;
+    right: -1.85em;
+  }
+  .member-email {
+    top: 5.2em;
+  }
+  .member-phone {
+    top: 8em;
+  }
+  #club-histoire {
+    width: 663px;
+    height: 600px;
+  }
+  #club-histoire .turn-page {
+    width: 331.5px;
+    height: 600px;
+  }
+  #club-histoire .turn-page p {
+    width: 284px;
+  }
+  /*--REALISATIONS--*/
+  .realisations-video iframe {
+    width: 326px;
+    height: 194px;
+  }
+  .realisations-infos {
+    width: 21.8em;
+  }
+  .infos-description {
+    margin-top: 0.7em;
+  }
+  /*--EVENEMENTS--*/
+  .photos img {
+    width: 10.6em;
+    height: auto;
+  }
+  .photos-albums-infos {
+    width: 33.1em;
+  }
+  /*--CONCOURS--*/
+  .concours-interclubs,
+  .concours-provincial,
+  .concours-national {
+    margin-right: 0.6em;
+  }
+  .concours-interclubs > div,
+  .concours-provincial > div,
+  .concours-national > div,
+  .concours-etrangers > div {
+    font-size: 0.9em;
+  }
+  /*--CONTACT--*/
+  .contact-form {
+    margin-right: 0.6em;
+  }
+  .contact-form input {
+    height: 1.8em;
+  }
+  .form-item,
+  .form-actions {
+    margin-top: 0.5em !important;
+    margin-bottom: 0.5em !important;
+  }
+  .contact-particulars > div > div {
+    margin-bottom: 2em;
+  }
+  #visit-map {
+    width: 660px;
+    height: 290px;
+  }
+  .inscription-member1,
+  .inscription-member2 {
+    width: 21.8em;
+  }
+  .inscription-member1 {
+    margin-right: 0.6em;
+  }
+  /*--FOOTER--*/
+  .footer-content {
+    width: 48.9em;
+  }
+  .footer-plan {
+    margin-right: 0.7em;
+  }
+  .footer-plan > ul {
+    width: 11.7em;
+  }
+  .footer-plan > ul:first-of-type {
+    margin-right: 0.7em;
+  }
+  .footer-contact {
+    width: 11.7em;
+    margin-right: 0.7em;
+  }
+  .footer-networks {
+    width: 11.7em;
+  }
+}
+@media only screen and (max-width: 799px) {
+  body {
+    font-size: 14.5px;
+  }
+  h2 {
+    background-size: 732px;
+  }
+  h3 {
+    font-size: 0.93em;
+  }
+  .with-icon {
+    padding-left: 1.7em;
+  }
+  .menu-nav li {
+    margin: 0 0.6em 0 0.6em;
+  }
+  /*--ACCUEIL--*/
+  .inscription-invite a {
+    font-size: 0.9em;
+  }
+  /*--CLUB--*/
+  .comite-members > div {
+    margin: 0em 0.35em 1em 0.35em;
+  }
+  .member-email,
+  .member-phone {
+    right: -2.3em;
+  }
+  .member-email {
+    top: 5em;
+  }
+  .member-phone {
+    top: 7.8em;
+  }
+  .club-history,
+  .links-others {
+    display: none;
+  }
+  /*--REALISATIONS--*/
+  .realisations-infos {
+    width: 21.2em;
+  }
+  .infos-description {
+    font-size: 0.9em;
+    line-height: 1.2em;
+    margin-top: 0.2em;
+  }
+  /*--EVENEMENTS--*/
+  /*--CONCOURS--*/
+  /*--CONTACT--*/
+  #visit-map {
+    width: 636px;
+  }
+  /*--FOOTER--*/
+  .footer-top img {
+    width: 7em;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 767px) {
+  body {
+    font-size: 14.5px;
+  }
+  header {
+    height: 17.8em;
+    width: 31em;
+    z-index: 1;
+  }
+  .page {
+    width: 31em;
+  }
+  .col4,
+  .col8 {
+    width: 24.7em;
+  }
+  .colb6 {
+    width: 26.1em;
+  }
+  .section {
+    width: 27em;
+  }
+  h2 {
+    background-size: 732px;
+    background-image: none;
+    background-color: #34549d;
+    height: 29px;
+    width: 21.5em;
+    left: -1.5em;
+  }
+  h3 {
+    font-size: 0.93em;
+  }
+  .with-icon {
+    padding-left: 1.7em;
+  }
+  .menu-nav {
+    top: 9.2em;
+    padding: 0.1em 0;
+    text-align: center;
+  }
+  .menu-nav a {
+    border-radius: 0;
+    width: 7em;
+    display: inline-block;
+    top: 1em;
+  }
+  .menu-nav a:hover {
+    top: 1em;
+  }
+  .menu-nav ul {
+    width: 27em;
+  }
+  .menu-nav li {
+    margin: 0.2em 0.1em !important;
+  }
+  #logo {
+    right: 10.6em;
+    top: -15.3em;
+  }
+  #logo img {
+    width: 140px;
+    height: 140px;
+  }
+  /*--ACCUEIL--*/
+  .inscription-invite a {
+    font-size: 0.9em;
+  }
+  .news-photos-infos,
+  .news-videos-infos {
+    width: 15.95em;
+  }
+  /*--CLUB--*/
+  .activities-intro img {
+    width: 27em;
+  }
+  .activities-intro p {
+    display: none;
+  }
+  .activities-details {
+    padding-top: 1em;
+  }
+  .activities-details > ul {
+    background-image: none;
+    height: 115px;
+    width: 27em;
+  }
+  .activities-details > div ul {
+    margin-bottom: 2em;
+  }
+  .activities-details > div ul li {
+    background: url('../images/sprite.png') no-repeat -714px -434px;
+    background-size: 1158px 573px;
+  }
+  .activities-details div h4 {
+    text-align: left;
+  }
+  .activities-jeudi,
+  .activities-jeudi {
+    width: 26.1em;
+  }
+  .comite-members img {
+    width: 12.97em;
+  }
+  .comite-members > div {
+    margin: 0em 0.35em 1.5em 0.35em;
+    width: 12.97em;
+  }
+  .member-nom-fonction {
+    font-size: 1.05em;
+  }
+  .member-email,
+  .member-phone {
+    right: 0.5em;
+  }
+  .member-email {
+    top: 8em;
+  }
+  .member-phone {
+    top: 10.3em;
+  }
+  /*--REALISATIONS--*/
+  .realisations-infos {
+    width: 21.2em;
+  }
+  .infos-description {
+    font-size: 0.9em;
+    line-height: 1.2em;
+    margin-top: 0.2em;
+  }
+  /*--EVENEMENTS--*/
+  /*--CONCOURS--*/
+  /*--CONTACT--*/
+  #visit-map {
+    width: 636px;
+  }
+  /*--FOOTER--*/
+  footer {
+    height: 37em;
+  }
+  .footer-content {
+    width: 30em;
+  }
+  .footer-plan > ul,
+  .footer-contact,
+  .footer-networks,
+  .footer-top {
+    width: 14.3em;
+  }
+  .footer-top img {
+    width: 7em;
+    height: auto;
+  }
 }

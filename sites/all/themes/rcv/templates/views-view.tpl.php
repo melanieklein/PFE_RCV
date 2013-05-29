@@ -31,7 +31,7 @@ $view = views_get_current_view();
 
 //var_dump($view->name);
 
-if(($view->name == 'comite_organisateur') || ($view->name =='autres_passionnes')){
+if(($view->name == 'comite_organisateur') || ($view->name =='autres_passionnes') || ($view->name == 'calendrier') || ($view->name == 'nouvelles_photos')){
 
   if($view->name == 'comite_organisateur'){
 
@@ -55,7 +55,7 @@ if(($view->name == 'comite_organisateur') || ($view->name =='autres_passionnes')
 
     <ul>
      <?php foreach($liens as $lien):?>
-     <li><?php print render ($lien); ?></li>
+     <li><a href="<?php print render ($lien['raw']['url']); ?>" target="_blank"><?php print render ($lien['raw']['title']); ?></a></li>
      <?php endforeach;?>
     </ul> 
 
@@ -72,7 +72,7 @@ if(($view->name == 'comite_organisateur') || ($view->name =='autres_passionnes')
 
     <ul>
      <?php foreach($liens as $lien):?>
-     <li><?php print render ($lien); ?></li>
+     <li><a href="<?php print render ($lien['raw']['url']); ?>" target="_blank"><?php print render ($lien['raw']['title']); ?></a></li>
      <?php endforeach;?>
     </ul> 
 
@@ -80,9 +80,27 @@ if(($view->name == 'comite_organisateur') || ($view->name =='autres_passionnes')
 
   <?php
   }
+
+    if($view->name == 'calendrier'){
+
+    ?>
+    <ul class="calendrier-events"><?php print $rows; ?></ul>
+
+    <?php 
+  }
+
+  if($view->name == 'nouvelles_photos'){
+
+    ?>
+    <ul><?php print $rows; ?></ul>
+
+    <?php if ($more): ?>
+    <?php print $more; ?>
+    <?php endif;
+  }
 }
 
-elseif(($view->name != 'comite_organisateur') || ($view->name != 'autres_passionnes'))
+elseif(($view->name != 'comite_organisateur') || ($view->name != 'autres_passionnes') || ($view->name != 'calendrier') || ($view->name != 'nouvelles_photos'))
 {
 ?>
 

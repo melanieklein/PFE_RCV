@@ -82,63 +82,21 @@
  * @see zen_preprocess_node()
  * @see template_process()
  */
-
-
 ?>
+<div class="concours-resultats section">
 
-<div class="album-photos section">
-
-  <?php if ($title_prefix || $title_suffix || $display_submitted || $unpublished || !$page && $title): ?>
-    <header>
-      <?php print render($title_prefix); ?>
-      <?php if (!$page && $title): ?>
-        <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
-      <?php endif; ?>
-      <?php print render($title_suffix); ?>
-
-      <?php if ($display_submitted): ?>
-        <p class="submitted">
-          <?php print $user_picture; ?>
-          <?php print $submitted; ?>
-        </p>
-      <?php endif; ?>
-
-      <?php if ($unpublished): ?>
-        <p class="unpublished"><?php print t('Unpublished'); ?></p>
-      <?php endif; ?>
-    </header>
-  <?php endif; ?>
-
+  <h3 class="with-icon"><?php print $title;?></h3>
+  <span class="concours-resultats-date"><?php print render($content['field_date_concours']);?></span>
+  <div class="concours-resultats-tableau">
+    <?php print render($content['field_r_sultats']);?>
+  </div>
   <?php
-    // We hide the comments and links now so that we can render them later.
-    hide($content['comments']);
-    hide($content['links']);    ?>
+  if($content['field_pdf']):
+  $uri = $content['field_pdf']['#items'][0]['uri'];
+  ?>
 
-    <h3 class="with-icon"><?php print $title;?></h3>
-    
-    <span><?php print render($content['field_date']);?></span>
-    <p class="album-photos-description"><?php print render($content['field_description_album']);?></p>
-
-    <?php
-    $photos = $content['field_photos_album'];
-    $nbr= count($photos);
-    ?>
-
-    <ul>
-    <?php
-    for($i=0;$i<$nbr;$i++){
-    ?>
-      <li><?php print render($photos[$i]);?>
-    <?php
-    }
-    ?>
-    </ul>
-
-    <a href="http://melanie-klein.be/PFE_RCV/evenements" class="photos-retour">Retour à la page événements</a>
-
-  <?php print render($content['links']); ?>
-
-  <?php print render($content['comments']); ?>
-
+  <a target="_blank" href="<?php print (file_create_url($uri));?>" title="PDF de tous les résultats">Voir tous les résultats du concours</a>
+  <?php endif;?>
+  <a href="http://melanie-klein.be/PFE_RCV/concours" class="concours-retour">Retourner à la page concours</a>
 
 </div><!-- /.node -->

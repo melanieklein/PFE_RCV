@@ -23,11 +23,12 @@
  *
  * @ingroup views_templates
  */
-?>	
-<li><?php print render($row->field_field_couverture_album); ?>
-	<div class="photos-albums-infos">
-		<h3><?php print ($fields['title']->content);?></h3>
-		<p><?php print render($row->field_field_date);?></p>
-			<p><?php print render($row->field_field_description_album);?></p>
-	</div>
-</li>	
+?>
+<li class="calendrier-event vevent" itemscope itemtype="http://schema.org/Event">
+	<h3 class="with-icon" itemprop="startDate"><?php print render($row->field_field_date_evenement);?></h3>
+	<span class="event-categorie"><?php print render($row->field_field_categorie_evenement);?></span>
+	<p itemprop="name"><?php print render($row->node_title);?></p>
+	<p itemprop="place"><?php print render($row->field_field_lieu_evenement);?></p>
+	<?php print ($fields['field_lien_google_map']->content);?>
+	<p><?php print render($row->field_field_description_evenement);?></p>
+</li>

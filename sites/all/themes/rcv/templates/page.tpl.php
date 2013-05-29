@@ -70,8 +70,6 @@
  */
 ?>
 
-<div class="page">
-
   <header role="banner">
 
         <?php if ($site_name): ?>
@@ -121,15 +119,18 @@
         </nav>
       <?php endif; ?>
 
+
+
+  </header>
+<div class="page">
+
     <?php if ($logo || $site_name): ?>
       <a href="<?php print $front_page; ?>" title="<?php print $site_name; ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" width="200" height="200" alt="<?php print $site_name; ?>" /></a>
     <?php endif; ?>
 
-  </header>
-
   <div class="content" role="main">
+
       <?php print render($page['highlighted']); ?>
-      <?php /*print $breadcrumb;*/ ?>
       <a id="main-content"></a>
       <?php print $messages; ?>
       <?php print render($tabs); ?>
@@ -137,6 +138,7 @@
       <?php if ($action_links): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
+      <?php print $breadcrumb; ?>
       <?php print render($page['content']); ?>
       <?php print $feed_icons; ?>
   </div><!-- /#content -->

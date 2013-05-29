@@ -70,9 +70,7 @@
  */
 ?>
 
-<div class="page">
-
-  <header role="banner">
+<header role="banner">
 
         <?php if ($site_name): ?>
           <h1 class="outliner"><?php print $site_name; ?></h1>
@@ -120,15 +118,19 @@
         </nav>
       <?php endif; ?>
 
-    <?php if ($logo || $site_name): ?>
+   
+  </header>
+
+<div class="page">
+
+   <?php if ($logo || $site_name): ?>
       <a href="<?php print $front_page; ?>" title="<?php print $site_name; ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" width="200" height="200" alt="<?php print $site_name; ?>" /></a>
     <?php endif; ?>
 
-  </header>
-
+  
   <div class="content" role="main">
       <?php print render($page['highlighted']); ?>
-      <?php /*print $breadcrumb;*/ ?>
+      
       <a id="main-content"></a>
       <?php print $messages; ?>
       <?php print render($tabs); ?>
@@ -136,13 +138,13 @@
       <?php if ($action_links): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
-    
+      <?php print $breadcrumb; ?>
      <p><?php print render($page['content']['system_main']['nodes']['5']['body'][0]['#markup']);?></p>
 
     <div class="section contact">
         <h2>nous contacter</h2>
         <div class="bloc contact-form col6"><?php print render($page['content']['webform_client-block-31']);?></div>
-        <div class="contact-particulars colb6"><?php print render($page['content']['block_10']);?></div>
+        <div class="contact-particulars colb6  vcard" itemscope itemtype="http://schema.org/Place"><?php print render($page['content']['block_10']);?></div>
     </div>  
     
     <div class="section visit">
@@ -153,16 +155,26 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8OyEue1StkL3D9sFSa5CC3ri3KnWQ_D0&sensor=true">
     </script>
     <script type="text/javascript">
+
+
+    
       function initialize() {
         var mapOptions = {
           center: new google.maps.LatLng(50.6474,5.623878),
           zoom: 17,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+          scrollwheel: false
         };
         var map = new google.maps.Map(document.getElementById("visit-map"),
             mapOptions);
 
           var image = 'sites/all/themes/rcv/images/icones/map-icon.png';
+
+          var contentString = '<div class="map-infos">'+'<p>Royal Ciné-Vidéo 8/16</p>'+'<p>Bâtiments de l\'U3A</p>'+'<p>Avenue Joseph Prévers, 27</p>'+'<p>4020 Liège</p>'+'<div>';
+
+          var infowindow = new google.maps.InfoWindow({
+              content: contentString
+          });
 
           var marker = new google.maps.Marker({
           map: map,
@@ -171,50 +183,55 @@
           icon: image
           });
 
-        var styles = [
-    {
-      featureType: "road",
-      elementType: "geometry.fill",
-      stylers: [
-        { color: "#dfe6e4" }
-      ]
-    },{
-      featureType: "road",
-      elementType: "labels.text.stroke",
-      stylers: [
-        { color: "#dfe6e4" }
-      ]
-    },{
-      featureType: "poi",
-      elementType: "all",
-      stylers: [
-      { color: "#FFFFFF" }
-      ]
-    },{
-      featureType: "all",
-      elementType: "labels.text.fill",
-      stylers: [
-      { color: "#34549D" }
-      ]
-    },{
-      featureType: "poi",
-      elementType: "labels.icon",
-      stylers: [
-        { color: "#34549D" }
-      ]
-    },{
-      featureType: "landscape",
-      elementType: "all",
-      stylers: [
-      { color:"#dfe6e4" }
-      ]
-    }   
-  ];
+          var styles = [
+          {
+            featureType: "road",
+            elementType: "geometry.fill",
+            stylers: [
+              { color: "#dfe6e4" }
+            ]
+          },{
+            featureType: "road",
+            elementType: "labels.text.stroke",
+            stylers: [
+              { color: "#dfe6e4" }
+            ]
+          },{
+            featureType: "poi",
+            elementType: "all",
+            stylers: [
+            { color: "#FFFFFF" }
+            ]
+          },{
+            featureType: "all",
+            elementType: "labels.text.fill",
+            stylers: [
+            { color: "#34549D" }
+            ]
+          },{
+            featureType: "poi",
+            elementType: "labels.icon",
+            stylers: [
+              { color: "#34549D" }
+            ]
+          },{
+            featureType: "landscape",
+            elementType: "all",
+            stylers: [
+            { color:"#dfe6e4" }
+            ]
+          }   
+        ];
 
-  map.setOptions({styles: styles});
+        map.setOptions({styles: styles});
 
+              google.maps.event.addListener(marker, 'click', function() {
+        infowindow.open(map,marker);
+      });
       }
+
       google.maps.event.addDomListener(window, 'load', initialize);
+
     </script>
 
         <div id="visit-map">

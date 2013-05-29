@@ -70,7 +70,6 @@
  */
 ?>
 
-<div class="page">
   <header role="banner">
         <?php if ($site_name): ?>
           <h1 class="outliner"><?php print $site_name; ?></h1>
@@ -118,17 +117,19 @@
         </nav>
       <?php endif; ?>
 
-    <?php if ($logo || $site_name): ?>
-      <a href="<?php print $front_page; ?>" title="<?php print $site_name; ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" width="200" height="200" alt="<?php print $site_name; ?>" /></a>
-    <?php endif; ?>
 
 
 
   </header>
 
+<div class="page">
+
+      <?php if ($logo || $site_name): ?>
+      <a href="<?php print $front_page; ?>" title="<?php print $site_name; ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" width="200" height="200" alt="<?php print $site_name; ?>" /></a>
+    <?php endif; ?>
+
   <div class="content" role="main">
       <?php print render($page['highlighted']); ?>
-      <?php /*print $breadcrumb;*/ ?>
       <a id="main-content"></a>
       <?php print $messages; ?>
       <?php print render($tabs); ?>
@@ -136,6 +137,7 @@
       <?php if ($action_links): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
+        <?php print $breadcrumb; ?>
 
     <div class="section intro-site">
       <div class="intro-text">
@@ -149,7 +151,7 @@
       <h2>à la une</h2>
   
       <section class="bloc news-contest col4"><?php print render($page['content']['views_derniers_concours-block']);?></section>
-      <section class="bloc news-calendar col8"><?php print render($page['content']['views_calendrier-block_2']);?></section>
+      <section class="bloc news-calendar col8"><?php print render($page['content']['views_prochains_evenements-block']);?></section>
       <section class="bloc news-forum col8"><?php print render($page['content']['views_nouveaux_topics-block']);?></section>
       <section class="news-photos colb6"><?php print render($page['content']['views_nouvelles_photos-block']);?></section>
       <section class="news-videos colb6"><?php print render($page['content']['views_nouvelles_videos-block']);?></section>

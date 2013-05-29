@@ -47,7 +47,7 @@
  * @see zen_process_block()
  */
 ?>
-<div class="section links-others"<?php print $attributes; ?>>
+<div class="section links-others">
 
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>

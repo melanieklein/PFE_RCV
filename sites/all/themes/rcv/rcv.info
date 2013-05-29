@@ -79,8 +79,8 @@ stylesheets[all][] = system.menus.css
 
 ; Optionally add some JavaScripts to your theme.
 
-scripts[] = http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js
-scripts[] = js/turn.js
+scripts[] = js/jquery.min.js
+scripts[] = js/turn.min.js
 scripts[] = js/script.js
 
 

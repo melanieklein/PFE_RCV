@@ -47,8 +47,6 @@
  * @see zen_process_block()
  */
 ?>
-<div id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
-
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
     <h3 class="with-icon"><?php print $title; ?></h3>
@@ -57,4 +55,3 @@
 
   <?php print $content; ?>
 
-</div><!-- /.block -->
