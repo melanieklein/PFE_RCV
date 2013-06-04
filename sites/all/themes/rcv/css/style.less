@@ -74,9 +74,9 @@ table {
 @folksR: 'FolksRegular';
 @folksL: 'FolksLightRegular';
 
-@grisFonce: #666666;
+@grisFonce: #555555;
 @grisClair: #DFE6E4;
-@blanc: #FAFBFC;
+@blanc: #FFFFFF;
 @bleu: #34549D;
 @bleuFonce: #1E3456;
 
@@ -104,7 +104,7 @@ body {
 a {
 	color:@bleu;
 	text-decoration:none;
-	&:hover {
+	&:hover, &:active {
 		color:@bleuFonce;
 		text-decoration: underline;
 	}
@@ -173,7 +173,7 @@ input[type="submit"] {
 	border: none !important;
 	color: @blanc !important;
 
-	&:hover {
+	&:hover, &:active {
 		color:@bleu !important;
 		background-color: @blanc!important;
 	}
@@ -192,13 +192,13 @@ header {
 .menu-nav {
 	clear: both;
 	position:relative;
-	top:6.2em;
+	top:5.5em;
 	margin: 0 auto;
 
 	a {
 		text-decoration: none;
 		font-family: @oswald;
-		font-size: 1.1em;
+		font-size: 1.3em;
 		text-transform: uppercase;
 		padding: 0.5em 0.4em;
 		background-color: @grisClair;
@@ -209,10 +209,13 @@ header {
 		-moz-transition-duration: 0.2s;
 		-moz-transition-timing-function: ease-out;
 		top: 0.1em;
+		display: inline-block;
+		width: 5.1em;
+		text-align: center;
 	}	
 	
 	a:hover{
-		top: -0.34em;
+		top: -0.2em;
 	}
 
 	ul {
@@ -223,7 +226,7 @@ header {
 
 	li {
 		display:inline-block;
-		margin: 0 1.15em 0 1.15em;
+		margin: 0 0.19em 0 0.19em;
 
 		&:first-child {
 			margin-left:0;
@@ -234,7 +237,7 @@ header {
 		}
 
 		&:nth-child(3){
-			margin-right: 17.8em;
+			margin-right: 13.45em;
 		}
 
 		&:hover div{
@@ -254,12 +257,15 @@ header {
 	a {
 		color: @blanc;
 		text-decoration: none;
-		&:hover {
+		&:hover, &:active {
 			text-decoration: underline;
 		}
 	}
 }
 
+.login-menu  {
+	margin-right: 2em;
+}
 .search-form {
 	margin-bottom: 0;
 	float: left;
@@ -290,11 +296,23 @@ header {
 #logo {
 	position: absolute;
 	top: -6.5em;
-	right: 27.7em;
+	right: 27.65em;
 	z-index: 10;
 	&:hover{
 		background-color: transparent;
 	
+	}
+}
+
+.page-phrase-intro {
+	padding-top: 0;
+	text-align: center;
+	margin-top: 1em;
+	font-family: @oswald;
+	margin-bottom: 3em;
+	a {
+		text-decoration: underline;
+		font-size: 1.1em;
 	}
 }
 
@@ -358,7 +376,7 @@ header {
 				-webkit-transition-timing-function: ease-out;
 		-moz-transition-timing-function: ease-out;
 
-		&:hover {
+		&:hover, &:active {
 			text-decoration: none;
 			color: @bleu;
 			background:  @grisClair url('../images/icones/buttonArrowB.png') no-repeat 10px 8px;
@@ -406,17 +424,63 @@ margin: 0 auto;
 margin-top: 6.5em;
 li {
 	display: inline-block;
+	margin-right: 1.2em;
+	
+	/*&:last-child{
+		background-color: @grisClair;
+		color: @bleu;
+		padding: 0.3em 0.5em;
+		border-radius: 5px;
+		font-family: oswald;
+		font-size: 1em;
+		text-transform: uppercase;
+	}*/
+}
+
+a {
+	background-color: @bleu;
+	color: @blanc;
+	padding: 0.3em 0.5em;
+	border-radius: 5px;
+	font-family: oswald;
+	font-size: 1em;
+	text-transform: uppercase;
+	position: relative;
+	&:hover {
+		color: @bleu;
+		background-color: @grisClair;
+		text-decoration: none;
+		&:after {
+			background-image: url('../images/icones/breadcrumb-arrow-h.png')
+		}
+	}
+	&:after {
+		content: "";
+		background-image: url('../images/icones/breadcrumb-arrow.png');
+		background-repeat: no-repeat;
+		position: absolute;
+		right: -0.73em;
+		width: 15px;
+		height: 35px;
+		background-size: 15px 35px;
+		top: 0em;
+	}
 }
 }
 
 /*-------------LOGIN & REGISTER--------*/
 
+.profile {
+	width: 62.65em;
+	margin: 0 auto;
+	margin-top: 2em;
+}
+
 #user-login, #user-register-form {
 	width: 62.65em;
 	margin: 0 auto;
 	position: relative;
-	margin-top: 4em;
-	padding-top: 4em;
+	margin-top: 2em;
 
 	.description {
 		margin-top: 0.4em;
@@ -453,7 +517,7 @@ li {
 }
 
 #user-login input[type="submit"] {
-	width: 6em;
+	width: 8em;
 			box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.26);
 		-moz-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.26);
 		-webkit-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.26);
@@ -465,7 +529,7 @@ li {
 }
 
 #user-register-form input[type="submit"] {
-	width: 12em;
+	width: 10em;
 		box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.26);
 		-moz-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.26);
 		-webkit-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.26);
@@ -545,7 +609,7 @@ padding: 0.5em;
 		transition: background 0.5s;
 		-webkit-transition-timing-function: ease-out;
 		-moz-transition-timing-function: ease-out;
-		&:hover {
+		&:hover, &:active {
 			text-decoration: none;
 			color: @bleu;
 			background:  @blanc url('../images/icones/buttonArrowB.png') no-repeat 10px 10px;
@@ -999,6 +1063,7 @@ h3 {
 
 .videos-retour {
 	float: right;
+	text-decoration: underline;
 }
 
 /*----------PAGE 1 CONCOURS-----------¨*/
@@ -1047,23 +1112,34 @@ h3 {
 	}
 }
 
+.pdf-link {
+	text-decoration: underline;
+}
+
 .concours-retour {
 	float: right;
+	text-decoration: underline;
+
 }
 
 /*---------------EVENEMENTS------------*/
-.calendrier-events {
-	margin-bottom: 4em;
-}
 
 .calendrier-event {
 	margin-bottom: 1.5em;
+	clear: both;
+	display: table;
 	h3 {
 		background: url('../images/sprite.png') no-repeat -4px -319px;
 		background-size: 1158px 573px;
 		height: 21px;
-		width: 260px;
+		width: 370px;
 		margin-bottom: 0.1em;
+	}
+
+	.event-infos {
+		float: left;
+		margin-right: 1.24em;
+		width: 27.85em;
 	}
 }
 
@@ -1073,7 +1149,24 @@ h3 {
 }
 
 .event-description {
-	margin-top: 1em;
+	float: left;
+	margin-top: 1.3em;
+	background-image: url('../images/icones/infos.png');
+	background-repeat: no-repeat;
+	background-size: 35px;
+	background-position: right;
+	padding-right: 2.8em;
+	height: 2.5em;
+	text-align: right;
+}
+
+.calendrier-google {
+	float: right;
+	text-decoration: underline;
+}
+
+.calendrier-google {
+	margin-bottom: 2em;
 }
 
 
@@ -1098,11 +1191,10 @@ h3 {
 
 .photos {
 	clear: both;
-	margin-top: 0;
 	.views-row {
 		float: left;
 		width: 30.68em;
-		margin-right: 1.28em;
+		margin: 0 1.28em 1.28em 0;
 		&:nth-child(2){
 			margin-right: 0em;
 		}
@@ -1149,6 +1241,7 @@ h3 {
 
 .photos-retour {
 	float: right;
+	text-decoration: underline;
 }
 
 .photos-albums-infos {
@@ -1415,7 +1508,7 @@ footer {
 	top: 2.5em;
 	position: relative;
 	font-size: 0.9em;
-	height: 20em;
+	height: 22em;
 	h3 {
 		color: @blanc;
 	}
@@ -1442,10 +1535,13 @@ footer {
 		width: 16.2em;
 		vertical-align: top;
 		&:first-of-type {
-			margin-right: 1.55em;
+			margin-right: 1.28em;
 		}
 		>li {	
 			margin-bottom: 0.7em;
+			>a {
+				font-weight: bold;
+			}
 
 			ul li {
 				font-family: @folksL;
@@ -1453,16 +1549,12 @@ footer {
 			}
 		}
 	}
-	em {
-	font-weight: bold;
-	}
 }
-
 
 .footer-contact {
 	float: left;
 	width: 16.2em;
-	margin-right: 1.55em;
+	margin-right: 1.28em;
 	font-family: @folksL;
 }
 
@@ -1505,28 +1597,33 @@ footer {
 .footer-networks {
 	float: left;
 	width: 16.2em;
-}
 
-.network-facebook {
+
+.first {
 	background: url('../images/sprite.png') no-repeat -380px -97px;
 	background-size: 1158px 573px;
 	width: 196px;
 	height: 40px;
 	padding: 0.4em 0em 0em 3em;
+	margin: 0;
 }
 
-.network-youtube {
+.last {
 	background: url('../images/sprite.png') no-repeat -380px -144px;
 	background-size: 1158px 573px;
 	width: 196px;
 	height: 36px;
 	padding: 0.4em 0em 0em 3em;
+	margin: 0;
+	}
+
 }
 
 #footer-top {
 	float: right;
 	position: relative;
-	top: 0.8em;
+	top: -1.8em;
+	right: -1.5em;
 	cursor:pointer;
 }
 
@@ -1559,7 +1656,11 @@ footer {
 	width: 57.3em;
 }
 
-.section {
+.section, .breadcrumb, #user-login, #user-register-form {
+	width: 51.2em;
+}
+
+.profile {
 	width: 51.2em;
 }
 
@@ -1570,40 +1671,59 @@ header {
 h2 {
 	background-size: 991px;
 	left: -3.38em;
+	padding: 0.8em 0em 0em 3.35em;
 }
 
 h3 {
 	font-size: 1.18em;
 }
 
-.with-icon {
-	padding-left: 1.4em;
+.login-menu {
+margin-right: 2.5em;
 }
 
 #logo {
-	right: 23.4em;
+	right: 23.68em;
 	img {
-		width: 170px;
+		width: 165px;
 		height: auto;
 	}
 }
 
 .menu-nav {
 
+	top: 5.7em;
+
 	ul {
 		width: 51.2em;
 	}
 
 	li {
-		margin: 0 0.5em 0 0.5em;
+		margin: 0 0.09em 0 0.09em;
 		&:nth-child(3){
-			margin-right: 12.57em;
+			margin-right: 10.1em;
 		}
 
+	}
+
+	a {
+		font-size: 1.1em;
 	}
 }
 
 /*--ACCUEIL--*/
+
+.inscription-invite {
+	width: 353px;
+	a {
+		right: 0.1em;
+	}
+}
+
+.news-contest .view-content {
+	margin-bottom: 0.8em;
+}
+
 
 .intro-text ul:first-child, .news-contest, .news-photos {
 	margin-right: 1em;
@@ -1618,7 +1738,23 @@ h3 {
 	width: 12em;
 }
 
+.news-photos {
+	h3 {
+		background-size: 1035px;
+background-position: -4px -312px;
+	}
 
+
+ li {
+	margin-bottom: 1.68em;
+}
+
+}
+
+.news-videos h3 {
+	background-size: 1060px;
+background-position: -4px -349px;
+}
 /*--CLUB--*/
 
 .activities-intro {
@@ -1634,6 +1770,10 @@ h3 {
 
 .activities-jeudi, .links-fcvb {
 	margin-right: 1em;
+}
+
+.comite {
+	height: 51em;
 }
 
 .comite-members {
@@ -1696,13 +1836,23 @@ h3 {
 
 /*--1 REALISATION--*/
 
-.realisation-video {
+.realisation-video iframe {
 	width: 845px;
-	height: auto;
+	height: 475px;
 }
 
 /*--EVENEMENTS--*/
+
+
+.calendrier-event .event-infos {
+width: 22em;
+}
 .photos {
+
+	.views-row {
+		width: 25.1em;
+		margin: 0 1em 1.28em 0;
+	}
 	img {
 		width: 12em;
 		height: auto;
@@ -1710,7 +1860,7 @@ h3 {
 }
 
 .photos-albums-infos {
-	width: 38.2em;
+	width: 12.2em;
 }
 
 /*--1 ALBUM PHOTOS--*/
@@ -1720,6 +1870,10 @@ h3 {
 }
 
 /*--CONCOURS--*/
+
+.concours > div {
+height: 16em;
+}
 
 .concours-interclubs, .concours-provincial, .concours-national {
 	margin-right: 1em;
@@ -1757,7 +1911,7 @@ width: 25.1em;
 }
 
 .footer-plan {
-	margin-right: 1.2em;
+	margin-right: 0.8em;
 	>ul {
 		width: 13.3em;
 		&:first-of-type {
@@ -1807,11 +1961,26 @@ body {
 	width: 48.5em;
 }
 
-.section {
+.section, .breadcrumb, #user-login, #user-register-form  {
 	width: 44.2em;
 }
+
+.breadcrumb {
+	margin-top: 3.5em;
+
+ a:after {
+	background-size: 15px 32px;
+	right: -0.85em;
+}
+}
+
+.menu-login {
+	margin-right: 1.8em;
+}
+
 header {
 	width: 48.5em;
+	height: 14em;
 }
 
 h2 {
@@ -1831,36 +2000,46 @@ h3 {
 }
 
 #logo {
-	right: 18.5em;
+	right: 18.85em;
+	top: -13em;
 	img {
-		width:170px;
-		height: 170px;
+		width:160px;
+		height: 160px;
 	}
 }
 
 .menu-nav {
+
+	top: 9.5em;
 
 	ul {
 		width: 44.2em;
 	}
 
 	li {
-		margin: 0 0.25em 0 0.25em;
+		margin: 0 0em 0 0em;
 		&:nth-child(3){
-			margin-right: 12em;
+			margin-right: 0em;
 		}
 
 	}
 
 	a {
-		font-size: 0.95em;
+		font-size: 1.25em;
+		width: 4.9em;
 		&:hover {
 			top: 0.1em;
+			color: @grisClair;
+			background-color: @bleu;
 		}
 	}
 }
 
 /*--ACCUEIL--*/
+
+.inscription-invite {
+width: 271px;
+}
 
 .intro-text ul:first-child, .news-contest, .news-photos {
 	margin-right: 0.6em;
@@ -1872,9 +2051,15 @@ h3 {
 }
 
 .news-photos-infos, .news-videos-infos {
-	width: 9.95em;
+	width: 10.95em;
+}
+.news-contest .view-content {
+margin-bottom: -0.5em;
 }
 
+.news-photos li {
+margin-bottom: 1.95em;
+}
 
 /*--CLUB--*/
 
@@ -1903,7 +2088,7 @@ h3 {
 	>div {
 		width: 10.5em;
 		height: 15.5em;
-		margin: 0em 0.35em 3em 0.35em;
+		margin: 0em 0.35em 0.5em 0.35em;
 	}
 
 	h4 {
@@ -1955,7 +2140,18 @@ width: 284px;
 	margin-top: 0.7em;
 }
 
+.realisation-video {
+	iframe {
+		width: 663px;
+		height: 373px;
+	}
+}
+
 /*--EVENEMENTS--*/
+
+.calendrier-event .event-infos {
+width: 19em;
+}
 .photos {
 	img {
 		width: 10.6em;
@@ -1964,7 +2160,17 @@ width: 284px;
 }
 
 .photos-albums-infos {
-	width: 33.1em;
+	width: 10.5em;
+}
+
+.photos .views-row {
+width: 21.7em;
+margin: 0 0.8em 1.28em 0;
+}
+
+.album-photos img {
+	width: 154px;
+	height: auto;
 }
 
 /*--CONCOURS--*/
@@ -2021,7 +2227,7 @@ width: 21.8em;
 .footer-plan {
 	margin-right: 0.7em;
 	>ul {
-		width: 11.7em;
+		width: 11.6em;
 		&:first-of-type {
 			margin-right: 0.7em;
 		}
@@ -2029,7 +2235,7 @@ width: 21.8em;
 }
 
 .footer-contact {
-	width: 11.7em;
+	width: 11.5em;
 	margin-right: 0.7em;
 }
 
@@ -2037,108 +2243,29 @@ width: 21.8em;
 	width: 11.7em;
 }
 
-}
+#footer-top img {
 
-@media only screen and (max-width: 799px) {
-
-body {
-	font-size: 14.5px;
-}
-
-h2 {
-	background-size: 732px;
-}
-
-h3 {
-	font-size: 0.93em;
-}
-
-.with-icon {
-	padding-left: 1.7em;
-}
-
-.menu-nav {
-	li {
-		margin: 0 0.6em 0 0.6em;
-	}
-}
-
-/*--ACCUEIL--*/
-
-.inscription-invite a {
-	font-size: 0.9em;
-}
-
-/*--CLUB--*/
-
-
-
-
-.comite-members {
-
-	>div {
-		margin: 0em 0.35em 1em 0.35em;
-	}
-}
-
-.member-email, .member-phone {
-	right: -2.3em;
-}
-
-.member-email {
-	top: 5em;
-}
-
-.member-phone {
-	top: 7.8em;
-}
-
-.club-history, .links-others {
-	display: none;
-}
-
-/*--REALISATIONS--*/
-
-.realisations-infos {
-	width: 21.2em;
-}
-
-.infos-description {
-	font-size: 0.9em;
-	line-height: 1.2em;
-	margin-top: 0.2em;
-}
-
-/*--EVENEMENTS--*/
-
-/*--CONCOURS--*/
-
-/*--CONTACT--*/
-
-#visit-map {
-	width: 636px;
-}
-
-/*--FOOTER--*/
-
-.footer-top {
-	img {
-		width: 7em;
-		height: auto;
-	}
-}
+	width: 100px;
+	height: auto;
 
 }
 
+}
 
 @media only screen and (max-width: 767px) {
 
+/*----Elements cachés----*/
+
+#histoire-club {
+	display:none;
+}
+
 body {
-	font-size: 14.5px;
+	font-size: 19.5px;
 }
 
 header {
-	height: 17.8em;
+	height: 17.4em;
 	width: 31em;
 	z-index: 1;
 }
@@ -2151,21 +2278,31 @@ header {
 	width: 24.7em;
 }
 
+.col6 {
+width: 24.8em;
+}
+
 .colb6 {
 	width: 26.1em;
 }
 
-.section {
-	width: 27em;
+.section, .breadcrumb, #user-login, #user-register-form {
+width: 27em;
+}
+
+.breadcrumb a:after {
+	background-size: 15px 42px;
+	height: 42px;
+	right: -0.65em;
 }
 
 h2 {
-	background-size: 732px;
 	background-image: none;
 	background-color: @bleu;
 	height: 29px;
-	width: 21.5em;
-	left: -1.5em;
+	width: 22.4em;
+	left: -1.55em;
+	padding: 0.55em 0em 0.3em 1.5em;
 }
 
 h3 {
@@ -2177,17 +2314,19 @@ h3 {
 }
 
 .menu-nav {
-	top: 9.2em;
+	top: 6.9em;
 	padding: 0.1em 0;
 	text-align: center;
 
 	a {
-		border-radius: 0;
-		width: 7em;
+		width: 5.17em;
 		display: inline-block;
 		top: 1em;
+		font-size: 1.43em;
 		&:hover {
 			top: 1em;
+			color: @grisClair;
+			background-color: @bleu;
 		}
 	}
 
@@ -2200,22 +2339,32 @@ h3 {
 }
 
 #logo {
-	right: 10.6em;
-	top: -15.3em;
-	 img {
-		width: 140px;
-		height: 140px;
-	}
+	right: 11.4em;
+	top: -15.2em;
 }
 
 /*--ACCUEIL--*/
 
-.inscription-invite a {
+.intro-site {
+	padding-top: 0;
+}
+
+.inscription-invite {
+	width: 18em;
+
+ a {
 	font-size: 0.9em;
+	top: 0.5em;
+	right: 0.8em;
+}
 }
 
 .news-photos-infos, .news-videos-infos {
     width: 15.95em;
+}
+
+.news-contest h3 {
+	width: 16em;
 }
 
 /*--CLUB--*/
@@ -2251,11 +2400,13 @@ p {
 	}
 }
 
-.activities-jeudi, .activities-jeudi {
-	width: 26.1em;
+.activities-jeudi {
+	margin-top: 2em;
 }
 
-
+.comite {
+height: 102em;
+}
 .comite-members {
 
 	img {
@@ -2273,7 +2424,7 @@ p {
 }
 
 .member-email, .member-phone {
-	right: 0.5em;
+	right: 3.7em;
 }
 
 .member-email {
@@ -2284,10 +2435,25 @@ p {
 	top: 10.3em;
 }
 
+.links-fcvb {
+	margin-bottom: 2em;
+}
+
 /*--REALISATIONS--*/
 
 .realisations-infos {
-	width: 21.2em;
+	width: 27em;
+	margin-bottom: 1em;
+}
+
+.realisations-video iframe {
+width: 527px;
+height: 296px;
+}
+
+.realisation-video iframe {
+width: 527px;
+height: 296px;
 }
 
 .infos-description {
@@ -2298,33 +2464,464 @@ p {
 
 /*--EVENEMENTS--*/
 
+.event-description {
+	width: 24.1em;
+	margin-bottom: 2em;
+}
+
+.photos .views-row {
+width: 27em;
+margin: 0 0em 1.28em 0;
+}
+
+.photos-albums-infos {
+width: 15.5em;
+}
+
+.album-photos img {
+width: 160px;
+height: auto;
+}
+
 /*--CONCOURS--*/
+
+.concours>div {
+	margin-bottom: 0.6em;
+}
+
+.concours-resultats h3 {
+	width: 17em;
+}
+
+.concours-resultats-tableau {
+font-size: 0.75em;
+}
+
+.col3 {
+	width: 10.96em;
+}
+
+.concours-provincial {
+	margin-right: 0;
+}
+
 
 /*--CONTACT--*/
 
 #visit-map {
-	width: 636px;
+	width: 527px;
 }
-
+.contact-form {
+margin-bottom: 2em;
+}
+.contact-phone {
+margin-top: 2em;
+}
+.visit-acces p {
+margin-bottom: 1em;
+width: 27em;
+}
+.inscription-member1, .inscription-member2 {
+width: 27em;
+}
+.inscription-note {
+	padding-top:0;
+	margin-bottom: 0;
+}
 /*--FOOTER--*/
 
 footer {
-	height: 37em;
+	height: 39em;
 }
 
 .footer-content {
 	width: 30em;
 }
 
-.footer-plan > ul, .footer-contact, .footer-networks, .footer-top {
-    width: 14.3em;
+.footer-plan, .footer-contact, .footer-networks {
+	font-size: 1.2em;
+	margin-right: 0;
 }
 
-.footer-top {
+.footer-plan > ul, .footer-contact, .footer-networks, .footer-top {
+    width: 12.05em;
+}
+
+.footer-plan > ul:first-of-type, .footer-contact {
+	margin-right: 0.6em;
+}
+
+.footer-networks iframe {
+		width: 193px !important;
+		height: 66px !important;
+	}
+
+#footer-top {
+
+
+top: 0.2em;
+right: -0.5em;
 	img {
-		width: 7em;
+		width: 6.5em;
 		height: auto;
+	}
+
+}
+
+}
+
+@media only screen and (max-width: 599px) {
+
+/*---Contenu masqué--*/
+
+.intro-text {
+	display: none;
+}
+
+
+body {
+	font-size: 17px;
+}
+
+header {
+	height: 16.9em;
+	width: 28.2em;
+}
+
+.page {
+	width: 28.25em;
+}
+
+#logo {
+	right: 9.4em;
+}
+
+.breadcrumb a:after {
+	background-size: 15px 35px;
+height: 37px;
+right: -0.8em;
+}
+
+.menu-nav {
+	top: 6.8em;
+
+ ul {
+width: 27.05em;
+}
+}
+
+h2 {
+	width: 21.14em;
+	padding: 0.55em 0em 0em 0.6em;
+	left: -0.5em;
+}
+
+.inscription-invite {
+width: 17.75em;
+}
+
+.news {
+	padding-top: 2.5em;
+}
+
+.news-contest h3 {
+	width: 16em;
+
+}
+
+.news-contest .view-content {
+margin-bottom: 1.5em;
+}
+
+.activities {
+	padding-top: 3em;
+}
+
+.member-email, .member-phone {
+right: 2.4em;
+}
+
+.realisations-video iframe {
+	width: 459px;
+	height: 258px;
+}
+
+.realisation-video iframe {
+	width: 459px;
+	height: 258px;
+}
+
+.album-photos img {
+width: 139px;
+height: auto;
+}
+
+#visit-map {
+	width: 459px;
+}
+
+.footer-content {
+width: 30.1em;
+}
+
+.footer-plan, .footer-contact, .footer-networks {
+font-size: 1em;
+}
+
+.footer-plan > ul, .footer-contact, .footer-networks, .footer-top {
+width: 14.6em;
+}
+
+#footer-top {
+	top: -0.8em;
+right: 0.5em;
+}
+
+}
+
+
+@media only screen and (max-width: 479px) {
+
+.activities-intro img, .event-description, .photos-albums-infos p:last-child {
+display: none;
+}
+
+
+body {
+	font-size: 15px;
+}
+
+header {
+	height: 16em;
+	width: 21.334em;
+}
+
+.page {
+	width: 21.334em;
+}
+
+.section, .breadcrumb, #user-login, #user-register-form {
+width: 20em;
+}
+
+.colb6 {
+	width:20em;
+}
+
+.col4, .col8 {
+	width: 17.7em;
+}
+.breadcrumb a:after {
+background-size: 15px 32px;
+height: 32px;
+right: -0.8em;
+}
+#logo {
+top: -14.2em;
+}
+
+.login-menu {
+margin-right: 0.2em;
+}
+
+.menu-login {
+margin-right: 0.2em;
+}
+
+.menu, .menu-login {
+	font-size: 1em;
+}
+
+.login-menu li, .menu-login li {
+margin-left: 0.2em;
+margin-right: 0.2em;
+}
+
+.menu-nav{
+top:6.4em;
+
+ ul {
+width: 21em;
+}
+
+a {
+	font-size: 1.1em;
+}
+}
+
+#logo {
+
+right: 6.4em;
+
+	img {
+width: 125px;
+height: 125px;
+}
+}
+h2 {
+	width: 15.75em;
+	left: -0.5em;
+	padding-left: 0.65em;
+}
+
+.col3, .col6 {
+width: 17.7em;
+}
+
+.news {
+	padding-top: 2.5em;
+}
+
+.inscription-invite {
+	width: 13.65em;
+	font-size: 1.2em;
+
+	a {
+		font-size: 0.85em;
+		background-size: 12px;
+		&:hover, &:active {
+			background-size: 12px;
+		}
 	}
 }
 
+.news-calendar .views-row > span:first-of-type, .news-forum .views-row > span:first-of-type {
+
+width: 17.2em;
+}
+
+.news-contest .more-link a, .news-forum .more-link a, .news-calendar .more-link a, .news-videos .more-link a, .news-photos .more-link a {
+
+font-size: 0.9em;
+background-size: 12px;
+
+	}
+
+	.news-photos-infos, .news-videos-infos {
+width: 10em;
+}
+
+.news-videos {
+	margin-top: 1.5em;
+}
+
+
+.activities-details>ul {
+	width: 20em;
+}
+
+.activities-jeudi {
+	margin-top: 0;
+}
+
+.comite-members > div {
+margin: 0em 0.35em 1.5em 0.35em;
+width: 19.97em;
+height: auto;
+}
+
+.comite-members img {
+width: 19.97em;
+}
+
+.member-phone {
+top: 14em;
+}
+.member-email, .member-phone {
+right: 7.9em;
+}
+.member-email {
+top: 11em;
+}
+
+.realisations-video iframe, .realisation-video iframe {
+	width: 300px;
+	height: 169px;
+}
+
+.realisations-infos {
+	width: 20em;
+}
+
+.photos .views-row {
+width: 20em;
+}
+
+.photos-albums-infos {
+width: 8.5em;
+}
+
+.album-photos img {
+width: 138px;
+height: auto;
+}
+
+.visit {
+	padding-top: 2em;
+}
+
+.visit-acces p {
+width: 20em;
+}
+
+#visit-map {
+	width: 300px;
+}
+
+.inscription-member1, .inscription-member2 {
+width: 20em;
+}
+
+footer {
+height: 38em;
+}
+
+.footer-content {
+	width:22.2em;
+}
+
+.footer-plan, .footer-contact, .footer-networks {
+font-size: 1.1em;
+}
+
+.footer-plan > ul, .footer-contact, .footer-networks, .footer-top {
+    width: 9.65em;
+}
+
+.footer-adress, .footer-post, .footer-email,.footer-phone  {
+	background-image: none;
+	padding-left: 0;
+}
+
+.footer-networks .first, .footer-networks .last {
+
+	width: 99px;
+}
+
+#footer-top {
+	right:0;
+	top: -1em;
+
+ img {
+width: 5em;
+height: auto;
+}
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.messages {
+	display: none;
 }

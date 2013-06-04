@@ -31,7 +31,7 @@ $view = views_get_current_view();
 
 //var_dump($view->name);
 
-if(($view->name == 'comite_organisateur') || ($view->name =='autres_passionnes') || ($view->name == 'calendrier') || ($view->name == 'nouvelles_photos')){
+if(($view->name == 'comite_organisateur') || ($view->name == 'comite_organisateur') || ($view->name =='autres_passionnes') || ($view->name == 'calendrier') || ($view->name == 'nouvelles_photos')){
 
   if($view->name == 'comite_organisateur'){
 
@@ -86,7 +86,9 @@ if(($view->name == 'comite_organisateur') || ($view->name =='autres_passionnes')
     ?>
     <ul class="calendrier-events"><?php print $rows; ?></ul>
 
-    <?php 
+    <a class="calendrier-google" target="_blank" href="https://www.google.com/calendar/embed?src=info@cinevideo816.be" title="Accéder au calendrier Google">Accéder au calendrier Google</a>  
+  
+  <?php
   }
 
   if($view->name == 'nouvelles_photos'){
@@ -106,6 +108,7 @@ elseif(($view->name != 'comite_organisateur') || ($view->name != 'autres_passion
 
 
 <div class="<?php print $classes; ?>">
+
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
     <?php print $title; ?>

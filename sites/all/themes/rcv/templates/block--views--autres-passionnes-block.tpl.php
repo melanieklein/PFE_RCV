@@ -47,7 +47,7 @@
  * @see zen_process_block()
  */
 ?>
-<div class="section links-others">
+<div id="autres-passionnes" class="section links-others">
 
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>

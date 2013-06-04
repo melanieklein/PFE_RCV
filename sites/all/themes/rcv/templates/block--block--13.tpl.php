@@ -47,14 +47,9 @@
  * @see zen_process_block()
  */
 ?>
-<div id="calendrier" class="section">
-
-  <?php print render($title_prefix); ?>
+<div class="footer-contact vcard" itemscope itemtype="http://schema.org/Place">
   <?php if ($title): ?>
-    <h2><?php print $title; ?></h2>
+    <h3><?php print $title; ?></h3>
   <?php endif; ?>
-  <?php print render($title_suffix); ?>
-
   <?php print $content; ?>
-
 </div><!-- /.block -->

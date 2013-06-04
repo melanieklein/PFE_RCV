@@ -144,7 +144,12 @@
   </div><!-- /#content -->
   
   <footer>
-  <?php print render($page['footer']); ?>
+    <div class="footer-content">
+      <?php print render($page['footer']['menu_menu-plan-du-site']);?>
+      <?php print render($page['footer']['block_13']); ?>
+      <?php print render($page['footer']['views_reseaux_sociaux-block']);?>
+      <?php print render($page['footer']['block_15']); ?>
+    </div>
   </footer>
 
 </div><!-- /#page -->

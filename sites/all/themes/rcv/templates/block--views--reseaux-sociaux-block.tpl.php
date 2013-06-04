@@ -46,15 +46,11 @@
  * @see template_process()
  * @see zen_process_block()
  */
-?>
-<div id="calendrier" class="section">
-
-  <?php print render($title_prefix); ?>
+?><div class="footer-networks">
   <?php if ($title): ?>
-    <h2><?php print $title; ?></h2>
+    <h3><?php print $title; ?></h3>
   <?php endif; ?>
-  <?php print render($title_suffix); ?>
-
+  <div class="fb-like" data-href="https://www.facebook.com/RoyalCineVideo816" data-send="false" data-width="243" data-show-faces="true" data-colorscheme="dark"></div>
   <?php print $content; ?>
 
-</div><!-- /.block -->
+</div>

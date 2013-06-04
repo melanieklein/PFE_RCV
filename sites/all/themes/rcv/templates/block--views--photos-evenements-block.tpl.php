@@ -47,7 +47,7 @@
  * @see zen_process_block()
  */
 ?>
-<div id="calendrier" class="section">
+<div id="photos-evenements" class="section photos">
 
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>

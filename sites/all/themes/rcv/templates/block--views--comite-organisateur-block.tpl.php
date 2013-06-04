@@ -47,7 +47,7 @@
  * @see zen_process_block()
  */
 ?>
-<div id="calendrier" class="section">
+<div id="comite-organisateur" class="section comite">
 
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>

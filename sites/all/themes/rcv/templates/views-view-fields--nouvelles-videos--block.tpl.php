@@ -28,7 +28,7 @@
 <li><?php print render($row->field_field_lien_youtube); ?></a>
 	<div class="news-videos-infos">
 		<h4><?php print ($fields['title']->content);?></h4>
-		<p>Publiée le <?php print $fields['created']->content; ?> par <?php print render($row->field_field_auteur);?></p>		
+		<p>Publiée le <?php print render($row->field_field_date_publication);?> par <?php print render($row->field_field_auteur);?></p>		
 	</div>
 </li>
 

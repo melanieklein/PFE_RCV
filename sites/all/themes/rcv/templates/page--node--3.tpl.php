@@ -118,19 +118,19 @@
         </nav>
       <?php endif; ?>
 
-
-
+   
   </header>
 
 <div class="page">
 
-
-    <?php if ($logo || $site_name): ?>
+   <?php if ($logo || $site_name): ?>
       <a href="<?php print $front_page; ?>" title="<?php print $site_name; ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" width="200" height="200" alt="<?php print $site_name; ?>" /></a>
     <?php endif; ?>
 
+  
   <div class="content" role="main">
       <?php print render($page['highlighted']); ?>
+      
       <a id="main-content"></a>
       <?php print $messages; ?>
       <?php print render($tabs); ?>
@@ -138,17 +138,15 @@
       <?php if ($action_links): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
-        <?php print $breadcrumb; ?>
+      <?php print $breadcrumb; ?>
+     <div class="page-phrase-intro section"><?php print render($page['content']['system_main']['nodes']['3']['field_phrase_introduction'][0]['#markup']);?></div>
 
-      <p><?php print render($page['content']['system_main']['nodes']['4']['body'][0]['#markup']);?></p>
-      <section class="section concours">
-        <h2>Résultats des concours</h2>
-        <div class="bloc concours-interclubs col3"><?php print render($page['content']['views_concours_interclubs-block']);?></div>
-        <div class="bloc concours-provincial col3"><?php print render($page['content']['views_concours_provincial-block']);?></div>
-        <div class="bloc concours-national col3"><?php print render($page['content']['views_concours_nationaux-block']);?></div>
-        <div class="bloc concours-etrangers col3"><?php print render($page['content']['views_concours_etrangers-block']);?></div>
-      </section>
+      <?php print render($page['content']['views_calendrier-block']);?>
+
+      <?php print render($page['content']['views_photos_evenements-block']);?>
+  
       <?php print $feed_icons; ?>
+
   </div><!-- /#content -->
   
   <footer>

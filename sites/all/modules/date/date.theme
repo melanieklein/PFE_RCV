@@ -229,7 +229,7 @@ function template_preprocess_date_display_single(&$variables) {
  */
 function theme_date_display_single($variables) {
   $date = $variables['date'];
-  $timezone = $variables['timezone'];
+  $timezone = NULL;
   $attributes = $variables['attributes'];
 
   // Wrap the result with the attributes.

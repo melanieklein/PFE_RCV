@@ -139,15 +139,15 @@
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
       <?php print $breadcrumb; ?>
-     <p><?php print render($page['content']['system_main']['nodes']['5']['body'][0]['#markup']);?></p>
+     <div class="page-phrase-intro section"><?php print render($page['content']['system_main']['nodes']['5']['field_phrase_introduction'][0]['#markup']);?></div>
 
-    <div class="section contact">
+    <div id="nous-contacter" class="section contact">
         <h2>nous contacter</h2>
         <div class="bloc contact-form col6"><?php print render($page['content']['webform_client-block-31']);?></div>
         <div class="contact-particulars colb6  vcard" itemscope itemtype="http://schema.org/Place"><?php print render($page['content']['block_10']);?></div>
     </div>  
     
-    <div class="section visit">
+    <div id="nous-rendre-visite" class="section visit">
         <h2>nous rendre visite</h2>
         <div class="visit-acces"><?php print render($page['content']['block_11']);?></div>
         
@@ -238,7 +238,7 @@
           
         </div>
     </div>
-    <div class="section inscription">
+    <div id="inscrire-club" class="section inscription">
       <?php print render($page['content']['block_12']);?>
     </div>
   
@@ -247,7 +247,12 @@
   </div><!-- /#content -->
   
   <footer>
-  <?php print render($page['footer']); ?>
+    <div class="footer-content">
+      <?php print render($page['footer']['menu_menu-plan-du-site']);?>
+      <?php print render($page['footer']['block_13']); ?>
+      <?php print render($page['footer']['views_reseaux_sociaux-block']);?>
+      <?php print render($page['footer']['block_15']); ?>
+    </div>
   </footer>
 
 </div><!-- /#page -->

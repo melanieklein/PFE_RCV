@@ -46,15 +46,6 @@
  * @see template_process()
  * @see zen_process_block()
  */
-?>
-<div id="calendrier" class="section">
-
-  <?php print render($title_prefix); ?>
-  <?php if ($title): ?>
-    <h2><?php print $title; ?></h2>
-  <?php endif; ?>
-  <?php print render($title_suffix); ?>
-
+?><div id="footer-top">
   <?php print $content; ?>
-
-</div><!-- /.block -->
+</div>

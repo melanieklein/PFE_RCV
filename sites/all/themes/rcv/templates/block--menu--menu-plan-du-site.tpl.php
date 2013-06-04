@@ -46,15 +46,40 @@
  * @see template_process()
  * @see zen_process_block()
  */
-?>
-<div id="calendrier" class="section">
-
-  <?php print render($title_prefix); ?>
+?><div class="footer-plan">
   <?php if ($title): ?>
-    <h2><?php print $title; ?></h2>
+    <h3><?php print $title; ?></h3>
   <?php endif; ?>
-  <?php print render($title_suffix); ?>
-
-  <?php print $content; ?>
-
-</div><!-- /.block -->
+	
+	<ul>
+  		<li><a href="<?php print ($elements['597']['#href']);?>" ><?php print ($elements['597']['#title']);?></a></li>
+		<li><a href="<?php print ($elements['598']['#href']);?>" ><?php print ($elements['598']['#title']);?></a>
+			<ul>
+				<li><a href="<?php print ($elements['598']['#below']['599']['#href']);?>" ><?php print ($elements['598']['#below']['599']['#title']);?></a></li>
+				<li><a href="<?php print ($elements['598']['#below']['600']['#href']);?>" ><?php print ($elements['598']['#below']['600']['#title']);?></a></li>
+				<li><a href="<?php print ($elements['598']['#below']['601']['#href']);?>" ><?php print ($elements['598']['#below']['601']['#title']);?></a></li>
+				<li><a href="<?php print ($elements['598']['#below']['602']['#href']);?>" ><?php print ($elements['598']['#below']['602']['#title']);?></a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="<?php print ($elements['603']['#href']);?>" ><?php print ($elements['603']['#title']);?></a>
+		</li>
+	</ul>
+		<ul>
+  		<li><a href="<?php print ($elements['604']['#href']);?>" ><?php print ($elements['604']['#title']);?></a>
+		<ul>
+				<li><a href="<?php print ($elements['604']['#below']['605']['#href']);?>" ><?php print ($elements['604']['#below']['605']['#title']);?></a></li>
+				<li><a href="<?php print ($elements['604']['#below']['606']['#href']);?>" ><?php print ($elements['604']['#below']['606']['#title']);?></a></li>
+  		</ul>
+  		</li>
+		<li><a href="<?php print ($elements['607']['#href']);?>" ><?php print ($elements['607']['#title']);?></a></li>
+		<li>
+			<a href="<?php print ($elements['608']['#href']);?>" ><?php print ($elements['608']['#title']);?></a>
+			<ul>
+				<li><a href="<?php print ($elements['608']['#below']['610']['#href']);?>" ><?php print ($elements['608']['#below']['610']['#title']);?></a></li>
+				<li><a href="<?php print ($elements['608']['#below']['611']['#href']);?>" ><?php print ($elements['608']['#below']['611']['#title']);?></a></li>
+				<li><a href="<?php print ($elements['608']['#below']['612']['#href']);?>" ><?php print ($elements['608']['#below']['612']['#title']);?></a></li>
+  			</ul>
+		</li>
+	</ul>
+</div>

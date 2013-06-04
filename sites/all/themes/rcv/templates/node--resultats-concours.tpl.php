@@ -95,7 +95,7 @@
   $uri = $content['field_pdf']['#items'][0]['uri'];
   ?>
 
-  <a target="_blank" href="<?php print (file_create_url($uri));?>" title="PDF de tous les résultats">Voir tous les résultats du concours</a>
+  <a target="_blank" href="<?php print (file_create_url($uri));?>" title="PDF de tous les résultats" class="pdf-link">Voir tous les résultats du concours</a>
   <?php endif;?>
   <a href="http://melanie-klein.be/PFE_RCV/concours" class="concours-retour">Retourner à la page concours</a>
 
