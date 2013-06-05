@@ -75,7 +75,7 @@ table {
 @folksL: 'FolksLightRegular';
 
 @grisFonce: #555555;
-@grisClair: #DFE6E4;
+@grisClair: #F4F9F7;
 @blanc: #FFFFFF;
 @bleu: #34549D;
 @bleuFonce: #1E3456;
@@ -123,6 +123,10 @@ h2 {
 	position: absolute;
 	background: url('../images/sprite.png') no-repeat -1px 0;
 	background-size: 1168px 573px;
+
+	 filter: progid:DXImageTransform.Microsoft.AlphaImageLoader( src='../images/sprite.png', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader( src='../images/sprite.png', sizingMethod='scale')";
+
 	height: 67px;
 	font-family: @oswald;
 	text-transform: uppercase;
@@ -1975,7 +1979,7 @@ body {
 }
 
 .menu-login {
-	margin-right: 1.8em;
+	margin-right: 0.5em;
 }
 
 header {
@@ -2044,6 +2048,12 @@ width: 271px;
 .intro-text ul:first-child, .news-contest, .news-photos {
 	margin-right: 0.6em;
 }
+
+.news-contest .more-link a, .news-forum .more-link a, .news-calendar .more-link a, .news-videos .more-link a, .news-photos .more-link a {
+background-image:none;
+padding: 0.3em 0.6em;
+
+	}
 
 .news-photos img, .news-videos img {
 	width: 9.6em;
